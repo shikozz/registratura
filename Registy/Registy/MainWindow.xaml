@@ -1,0 +1,33 @@
+﻿<Window x:Class="Registy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#BFEAF5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="#A2D2DE">
+            <!--кнопачки входа выхода-->
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border Width="250" Height="300" CornerRadius="20" Background="#A2D2DE">
+                <StackPanel HorizontalAlignment="Center">
+                    <Label Content="Авторизация"/>
+                    <Label Content="Пожалуйста авторизуйтесь для входа в личный кабинет"/>
+                    <TextBox Name="authLoginTextBox"/>
+                    <TextBox Name="authPasswordTextBox"/>
+                    <Button Content="Вход"/>
+                    <Label Content="Сменить пароль"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+    </Grid>
+</Window>
