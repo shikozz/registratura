@@ -3,34 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Registy"
              StartupUri="Registration.xaml">
+    
     <Application.Resources>
-
-        <Style TargetType="Button" x:Key="RoundButton">
-            <Setter Property="Background" Value="#EAFDFC"/>
-            <Setter Property="FontFamily" Value="Segoe UI"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="BorderThickness" Value="0"/>
-                    <Setter Property="BorderBrush" Value="#EAFDFC"/>
-                    <Setter Property="CornerRadius" Value="10" />
-                </Style>
-            </Style.Resources>
-        </Style>
-
-
-
-        <Style TargetType="TextBox" x:Key="RoundBox">
-            <Setter Property="Background" Value="#EAFDFC"/>
-            <Setter Property="FontFamily" Value="Segoe UI"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="BorderThickness" Value="0"/>
-                    <Setter Property="BorderBrush" Value="#EAFDFC"/>
-                    <Setter Property="CornerRadius" Value="10" />
-                </Style>
-            </Style.Resources>
-        </Style>
-
-
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/ComponentStyles.xaml"/>
+                <ResourceDictionary Source="Styles/Geometries.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <!--<FontFamily x:Key="ComfortaaBold">pack://application:,,,/Fonts/#Comfortaa Bold</FontFamily>-->
+            <!--<FontFamily x:Key="ComfortaaLight">pack://application:,,,/Fonts/#Comfortaa Light</FontFamily>-->
+            <FontFamily x:Key="ComfortaaMedium">pack://application:,,,/Fonts/#Comfortaa</FontFamily>
+            <!--<FontFamily x:Key="ComfortaaRegular">pack://application:,,,/Fonts/#Comfortaa Regular</FontFamily>-->
+            <!--<FontFamily x:Key="ComfortaaSemiBold">pack://application:,,,/Fonts/#Comfortaa Semi Bold</FontFamily>-->
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

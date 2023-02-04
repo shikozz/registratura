@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Registy
 {
-    /// <summary>
-    /// Interaction logic for Registration.xaml
-    /// </summary>
     public partial class Registration : Window
     {
         public Registration()
@@ -24,63 +21,23 @@ namespace Registy
             InitializeComponent();
         }
 
-        private void fio_GotFocus(object sender, RoutedEventArgs e)
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
-            if (fio.Text.Equals("Введите ФИО"))
-            {
-                fio.Text = "";
-                fio.Foreground = new SolidColorBrush(Colors.Black);
-            }
+            WindowState = WindowState.Minimized;
         }
 
-        private void fio_LostFocus(object sender, RoutedEventArgs e)
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
-            if(fio.Text.Equals(""))
-            {
-                fio.Text = "Введите ФИО";
-                fio.Foreground = new SolidColorBrush(Colors.Gray);
-            }    
+            Close();
         }
 
-        private void snils_GotFocus(object sender, RoutedEventArgs e)
+        private void RegistrationButton_Click(object sender, RoutedEventArgs e)
         {
-            if (snils.Text.Equals("Введите СНИЛС"))
-            {
-                snils.Text = "";
-                snils.Foreground = new SolidColorBrush(Colors.Black);
-            }
+            Window Authorization = new Authorization();
+            Close();
+            Authorization.Show();
         }
 
-        private void snils_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (snils.Text.Equals(""))
-            {
-                snils.Text = "Введите СНИЛС";
-                snils.Foreground = new SolidColorBrush(Colors.Gray);
-            }
-        }
 
-        private void pass_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (pass.Text.Equals("Введите пароль"))
-            {
-                pass.Text = "";
-                pass.Foreground = new SolidColorBrush(Colors.Black);
-            }
-        }
-
-        private void pass_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (pass.Text.Equals(""))
-            {
-                pass.Text = "Введите пароль";
-                pass.Foreground = new SolidColorBrush(Colors.Gray);
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
     }
 }
