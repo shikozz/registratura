@@ -8,95 +8,100 @@
         Title="Registration"
         Height="900" Width="1200"
         WindowStyle="SingleBorderWindow"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        PreviewMouseDown="Window_PreviewMouseDown"
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown"
+        StateChanged="Window_StateChanged">
 
     <WindowChrome.WindowChrome>
-        <WindowChrome
-            GlassFrameThickness="0"
-            CaptionHeight="36"
-            CornerRadius="0"
-            />
+        <WindowChrome 
+            x:Name="WinChrome"
+            UseAeroCaptionButtons="False"
+            GlassFrameThickness="1"
+            CaptionHeight="32"
+            CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 
-    <Grid Background="#BFEAF5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="36"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Border x:Name="MainBorder">
+        <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Background="#A2D2DE">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button 
-                    x:Name="MinimizeButton"
-                    Width="32" Height="32"
-                    HorizontalAlignment="Right"
-                    Style="{StaticResource MinimizeButton}"
-                    Click="MinimizeButton_Click"
-                    WindowChrome.IsHitTestVisibleInChrome="True"
-                    Margin="0,0,16,0"/>
-                
-                <Button 
-                    x:Name="CloseButton"
-                    Width="32" Height="32"
-                    HorizontalAlignment="Right"
-                    Style="{StaticResource CloseButton}"
-                    Click="CloseButton_Click"
-                    WindowChrome.IsHitTestVisibleInChrome="True"
-                    Margin="0,0,16,0"/>
+            <Grid Grid.Row="0" Background="#A2D2DE">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button 
+                        x:Name="MinimizeButton"
+                        Width="32" Height="32"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource MinimizeButton}"
+                        Click="MinimizeButton_Click"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Margin="0,0,16,0"/>
+
+                    <Button 
+                        x:Name="CloseButton"
+                        Width="32" Height="32"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource CloseButton}"
+                        Click="CloseButton_Click"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Margin="0,0,16,0"/>
+                </StackPanel>
+            </Grid>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Label
+                            Content="Регистрация"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontSize="48"/>
+
+                        <StackPanel Orientation="Vertical" Width="384" VerticalAlignment="Bottom" Grid.Row="1">
+                            <TextBox 
+                                TextAlignment="Center"
+                                x:Name="FullNameTextBox"
+                                Tag="ФИО"
+                                FontSize="30"
+                                Height="70"
+                                Margin="0,0,0,20"/>
+
+                            <TextBox 
+                                TextAlignment="Center"
+                                Tag="СНИЛС"
+                                FontSize="30"
+                                x:Name="InsuranceNumTextBox"
+                                Height="70"
+                                Margin="0,0,0,20"/>
+
+                            <TextBox
+                                TextAlignment="Center"
+                                Tag="Пароль"
+                                FontSize="30"
+                                Name="PasswordTextBox"
+                                Height="70"
+                                Margin="0,0,0,20"/>
+
+                            <Button
+                                x:Name="RegistrationButton"
+                                Content="Ок"
+                                FontSize="48"
+                                Height="96"
+                                Margin="0,0,0,20"
+                                Click="RegistrationButton_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
             </StackPanel>
         </Grid>
-
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Label
-                        Content="Регистарция"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontSize="48" 
-                        />
-                    
-                    <StackPanel Orientation="Vertical" Width="384" VerticalAlignment="Bottom" Grid.Row="1">
-                        <TextBox 
-                            TextAlignment="Center"
-                            x:Name="fio"
-                            Tag="ФИО"
-                            FontSize="30"
-                            Height="70"
-                            Margin="0,0,0,20"/>
-                    
-                        <TextBox 
-                            TextAlignment="Center"
-                            Tag="СНИЛС"
-                            FontSize="30"
-                            x:Name="snils"
-                            Height="70"
-                            Margin="0,0,0,20"/>
-                        
-                        <TextBox
-                            TextAlignment="Center"
-                            Tag="Пароль"
-                            Padding="15,0,0,0"
-                            FontSize="30"
-                            Name="pass"
-                            Height="70"
-                            Margin="0,0,0,20"/>
-                        
-                        <Button
-                            x:Name="RegistrationButton"
-                            Content="Ок"
-                            FontSize="48"
-                            Height="96"
-                            Margin="0,0,0,20"
-                            Click="RegistrationButton_Click"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
-        </StackPanel>
-
-    </Grid>
+    </Border>
 </Window>

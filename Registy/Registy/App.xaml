@@ -10,11 +10,11 @@
                 <ResourceDictionary Source="Styles/ComponentStyles.xaml"/>
                 <ResourceDictionary Source="Styles/Geometries.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            <!--<FontFamily x:Key="ComfortaaBold">pack://application:,,,/Fonts/#Comfortaa Bold</FontFamily>-->
-            <!--<FontFamily x:Key="ComfortaaLight">pack://application:,,,/Fonts/#Comfortaa Light</FontFamily>-->
-            <FontFamily x:Key="ComfortaaMedium">pack://application:,,,/Fonts/#Comfortaa</FontFamily>
-            <!--<FontFamily x:Key="ComfortaaRegular">pack://application:,,,/Fonts/#Comfortaa Regular</FontFamily>-->
-            <!--<FontFamily x:Key="ComfortaaSemiBold">pack://application:,,,/Fonts/#Comfortaa Semi Bold</FontFamily>-->
+            <FontFamily x:Key="ComfortaaBold">pack://application:,,,/Fonts/#Comfortaa Bold</FontFamily>
+            <FontFamily x:Key="ComfortaaLight">pack://application:,,,/Fonts/#Comfortaa Light</FontFamily>
+            <FontFamily x:Key="ComfortaaMedium">pack://application:,,,/Fonts/#Comfortaa Medium</FontFamily>
+            <FontFamily x:Key="ComfortaaRegular">pack://application:,,,/Fonts/#Comfortaa Regular</FontFamily>
+            <FontFamily x:Key="ComfortaaSemiBold">pack://application:,,,/Fonts/#Comfortaa Semi Bold</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -82,6 +82,7 @@
                                 VerticalAlignment="Center"
                                 Background="Transparent"
                                 FontSize="{TemplateBinding FontSize}"
+                                FontFamily="{TemplateBinding FontFamily}"
                                 Foreground="{TemplateBinding BorderBrush}"
                                 IsHitTestVisible="False"
                                 Text="{TemplateBinding Tag}"

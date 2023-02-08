@@ -9,12 +9,6 @@
         Height="900" Width="1200"
         WindowStartupLocation="CenterScreen">
 
-    <!--<WindowChrome.WindowChrome>
-        <WindowChrome
-                          
-        />
-    </WindowChrome.WindowChrome>-->
-    
     <Grid Background="#BFEAF5">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>

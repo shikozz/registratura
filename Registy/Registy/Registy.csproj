@@ -110,6 +110,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\Comfortaa-Medium.ttf" />
+    <Resource Include="Fonts\Comfortaa-Bold.ttf" />
+    <Resource Include="Fonts\Comfortaa-Regular.ttf" />
+    <Resource Include="Fonts\Comfortaa-Light.ttf" />
+    <Resource Include="Fonts\Comfortaa-SemiBold.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,8 +123,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\" />
-    <Folder Include="Page\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
