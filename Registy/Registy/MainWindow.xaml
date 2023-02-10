@@ -5,29 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Registy"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#BFEAF5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        Title="MainWindow" 
+        Height="800" Width="1200"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown"
+        StateChanged="Window_StateChanged">
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+            x:Name="WinChrome"
+            UseAeroCaptionButtons="False"
+            GlassFrameThickness="1"
+            CaptionHeight="32"
+            CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
 
-        <StackPanel Grid.Row="0" Background="#A2D2DE">
-            <!--кнопачки входа выхода-->
-        </StackPanel>
+    <Border x:Name="MainBorder">
+        <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="36"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Border Width="250" Height="300" CornerRadius="20" Background="#A2D2DE">
-                <StackPanel HorizontalAlignment="Center">
-                    <Label Content="Авторизация"/>
-                    <Label Content="Пожалуйста авторизуйтесь для входа в личный кабинет"/>
-                    <TextBox Name="authLoginTextBox"/>
-                    <TextBox Name="authPasswordTextBox"/>
-                    <Button Content="Вход"/>
-                    <Label Content="Сменить пароль"/>
+            <Grid Grid.Row="0" Background="#A2D2DE">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button 
+                        x:Name="MinimizeButton"
+                        Width="32" Height="32"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource MinimizeButton}"
+                        Click="MinimizeButton_Click"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Margin="0,0,16,0"/>
+
+                    <Button 
+                        x:Name="CloseButton"
+                        Width="32" Height="32"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource CloseButton}"
+                        Click="CloseButton_Click"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Margin="0,0,16,0"/>
                 </StackPanel>
-            </Border>
-        </StackPanel>
+            </Grid>
 
-    </Grid>
+            <Frame x:Name="RootFrame" NavigationUIVisibility="Hidden" LoadCompleted="RootFrame_LoadCompleted" Grid.Row="1"/>
+        </Grid>
+    </Border>
 </Window>
