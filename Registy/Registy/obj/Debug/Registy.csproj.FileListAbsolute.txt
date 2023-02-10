@@ -83,3 +83,25 @@ C:\Users\1\Desktop\registratura-main — копия\Registy\Registy\obj\Debug\Re
 C:\Users\1\Desktop\registratura-main — копия\Registy\Registy\obj\Debug\Registy.csproj.CoreCompileInputs.cache
 C:\Users\1\Desktop\registratura-main — копия\Registy\Registy\obj\Debug\Registy.exe
 C:\Users\1\Desktop\registratura-main — копия\Registy\Registy\obj\Debug\Registy.pdb
+D:\4ИС2\lebedev\registratura\Registy\Registy\bin\Debug\Registy.exe.config
+D:\4ИС2\lebedev\registratura\Registy\Registy\bin\Debug\Registy.exe
+D:\4ИС2\lebedev\registratura\Registy\Registy\bin\Debug\Registy.pdb
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.csprojAssemblyReference.cache
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Styles\ComponentStyles.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Styles\Geometries.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Authorization.g.cs
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\MainWindow.g.cs
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registration.g.cs
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\App.g.cs
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy_MarkupCompile.cache
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy_MarkupCompile.lref
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\App.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Authorization.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\MainWindow.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registration.baml
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.g.resources
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.Properties.Resources.resources
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.csproj.GenerateResource.cache
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.csproj.CoreCompileInputs.cache
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.exe
+D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\Registy.pdb
