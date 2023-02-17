@@ -10,24 +10,30 @@ USE [RegistraturaBase]
 GO
 
 
+
+--таблица с ролями
 create table Roles(
 	id int identity(1,1) not null,
 	name nvarchar(100),
 	primary key(id)
 )
 
+--типы услуг
 create table TypeServices(
 	id int identity(1,1) not null,
 	name nvarchar(100) not null
 	primary key(id)
 )
 
+--виды специальностей работников в регистратуре
 create table JobTitles(
 	id int identity(1,1) not null, 
 	name nvarchar(100) not null,
+	description nvarchar(2000),
 	primary key(id)
 )
 
+--справочник всех пользователей в приложении(админы тоже пользователи)
 create table Users(
 	id int identity(1,1) not null,
 	name nvarchar(100) not null,
@@ -44,6 +50,17 @@ create table Users(
 	foreign key(roleId) references Roles(id),
 )
 
+--таблица в которую будут добавляться айдишник врача и его специальность, у одного врача может быть несколько прав
+create table Permissions(
+	id int identity(1,1) not null,
+	jobTitleId int not null,
+	userId int not null,
+	primary key(id),
+	foreign key(userId) references Users(id),
+	foreign key(jobTitleId) references JobTitles(id)
+)
+
+--справочник заказов регистратуры
 create table Orders(
 	id int identity(1,1) not null,
 	clientId int not null,
