@@ -1,63 +1,114 @@
 USE [master]
 GO
 
-CREATE DATABASE [TestScriptBase]
+CREATE DATABASE [RegistraturaBase]
 ON PRIMARY 
-( NAME = N'TestScriptBase', FILENAME = N'D:\MSSQL\TestScriptBase.mdf')
+( NAME = N'RegistraturaBase', FILENAME = N'D:\MSSQL\RegistraturaBase.mdf')
 GO
 
-USE [TestScriptBase]
+USE [RegistraturaBase]
 GO
 
-create table Doctors(
+
+create table Roles(
 	id int identity(1,1) not null,
-	doctrorsId int,
 	name nvarchar(100),
-	primary key(id),
-	constraint 
+	primary key(id)
+)
+
+create table TypeServices(
+	id int identity(1,1) not null,
+	name nvarchar(100) not null
+	primary key(id)
+)
+
+create table JobTitles(
+	id int identity(1,1) not null, 
+	name nvarchar(100) not null,
+	primary key(id)
 )
 
 create table Users(
 	id int identity(1,1) not null,
-	
+	name nvarchar(100) not null,
+	snils nvarchar(11) not null,
+	unique(snils),
+	age int,
+	gender bit,
+	login nvarchar(100) not null,
+	password nvarchar(100) not null,
+	roleId int not null,
+	dateReg dateTime,
+	blocked bit,
+	primary key(id),
+	foreign key(roleId) references Roles(id),
 )
 
-create table FIRST_TABLE (
-ID int identity(100,1) not null,
-NAME nvarchar(25),
-constraint CON_FIRST_TABLE_PK
-primary key (ID),
-constraint CON_FIRST_TABLE_UNI_1
-unique (NAME))
---GO
+create table Orders(
+	id int identity(1,1) not null,
+	clientId int not null,
+	doctorId int not null,
+	typeServiceId int not null,
+	dateOrder dateTime not null,
+	primary key(id),
+	foreign key(typeServiceId) references TypeServices(id),
+	foreign key(clientId) references Users(id),
+	foreign key(doctorId) references Users(id)
+)
 
-create table SECOND_TABLE (
-ID int identity(100,1) not null,
-FIRST_TABLE_ID int,
-NAME nvarchar(25),
-VALUE1 decimal(18,2),
-VALUE2 decimal(18,2),
-SUM_AMOUNT as (VALUE1 + VALUE2),
-constraint CON_SECOND_TABLE_PK
-primary key (ID),
-constraint CON_SECOND_TABLE_FK_1
-foreign key (FIRST_TABLE_ID) references FIRST_TABLE (ID)
-on delete no action on update cascade,
-constraint CON_SECOND_TABLE_UNI_1
-unique (VALUE1, VALUE2))
---GO
+set identity_insert Users on
+insert into Users(id, name, snils, age, gender, login, password, roleId)
+values	(1, 'Соловьёв Назарий Святославович', '88028707129', 25, 1, 'soloviev', 'sns25ru', 0),
+		(2, 'Мамонтов Витольд Дамирович', '71950154191', 69, 1, 'mamontov', 'mvd69ru', 0),
+		(3, 'Бирюков Ефрем Лукьянович', '24543969600', 19, 1, 'birukov', 'bel19ru', 0),
+		(4, 'Карпова Инара Ростиславовна', '44188153390', 41, 0, 'karpova', 'kir41ru', 0),
+		(5, 'Коновалова Северина Кимовна', '43519629598', 55, 0, 'konovalova', 'ksk55ru', 0),
+		(6, 'Авдеева Кармелитта Евсеевна', '95941244544', 39, 0, 'avdeeva', 'ake39ru', 0)
+set identity_insert Users off
 
-SET IDENTITY_INSERT FIRST_TABLE ON
-insert into FIRST_TABLE(ID, NAME)
-values(1, 'Наименование 1'),
-      (2, 'Наименование 2')
-SET IDENTITY_INSERT FIRST_TABLE OFF
---GO
+set identity_insert TypeServices on
+insert into TypeServices(id, name)
+values	(1, 'Запись к врачу'),
+		(2, 'Сдача анализов'),
+		(3, 'Запись на продецуры'),
+		(4, 'График работы врачей')
+set identity_insert TypeServices off
 
-SET IDENTITY_INSERT SECOND_TABLE ON
-insert into SECOND_TABLE(ID, FIRST_TABLE_ID, NAME, VALUE1, VALUE2)
-values(1, 2, 'Имя 1', 10.00, 3.45),
-      (2, 2, 'Имя 2', 12.50, 7.50),
-      (3, 1, 'Имя 3', 1.15, 9.05)
-SET IDENTITY_INSERT SECOND_TABLE OFF
---GO
+set identity_insert JobTitles on
+insert into JobTitles(id, name)
+values	(1, 'ВРАЧ-АЛЛЕРГОЛОГ'),
+		(2, 'ВРАЧ-АНЕСТЕЗИОЛОГ-РЕАНИМАТОЛОГ'),
+		(3, 'ВРАЧ-ЭПИДЕМИОЛОГ'),
+		(4, 'ВРАЧ-ДЕЗИНФЕКЦИОНИСТ'),
+		(5, 'ВРАЧ-КАРДИОЛОГ'),
+		(6, 'ВРАЧ-ОНКОЛОГ'),
+		(7, 'ВРАЧ-ТРАВМАТОЛОГ-ОРТОПЕД'),
+		(8, 'ВРАЧ-ФИЗИОТЕРАПЕВТ'),
+		(9, 'ВРАЧ-СУДЕБНО-МЕДИЦИНСКИЙ ЭКСПЕРТ'),
+		(10, 'САНИТАРНЫЙ ВРАЧ'),
+		(11, 'ВРАЧ-РЕНТГЕНОЛОГ'),
+		(12, 'ВРАЧ-ТОКСИКОЛОГ'),
+		(13, 'ВРАЧ-ПУЛЬМОНОЛОГ'),
+		(14, 'ВРАЧ-УРОЛОГ'),
+		(15, 'ВРАЧ-ТЕРАПЕВТ'),
+		(16, 'ВРАЧ-ПЕДИАТР'),
+		(17, 'ВРАЧ-ИНФЕКЦИОНИСТ'),
+		(18, 'ВРАЧ-ХИРУРГ'),
+		(19, 'ВРАЧ АКУШЕР-ГИНЕКОЛОГ'),
+		(20, 'ВРАЧ-НЕВРОПАТОЛОГ'),
+		(21, 'ВРАЧ-ПСИХИАТР'),
+		(22, 'ВРАЧ-НАРКОЛОГ'),
+		(23, 'ВРАЧ-ОФТАЛЬМОЛОГ'),
+		(24, 'ВРАЧ-ОТОЛАРИНГОЛОГ'),
+		(25, 'ВРАЧ-ДЕРМАТОВЕНЕРОЛОГ'),
+		(26, 'ВРАЧ-СТОМАТОЛОГ'),
+		(27, 'ФАРМАЦЕВТ'),
+		(28, 'ЗУБНОЙ ТЕХНИК')
+set identity_insert JobTitles off
+
+set identity_insert Roles on
+insert into Roles(id, name)
+values	(1, 'Администратор'),
+		(2, 'Врач'),
+		(3, 'Клиент')
+set identity_insert Roles off

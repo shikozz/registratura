@@ -89,6 +89,7 @@
                                 TextAlignment="{TemplateBinding TextAlignment}"
                                 HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                                 Visibility="Collapsed"
+                                Padding="{TemplateBinding Padding}"
                                 Margin="2, 0"
                                 />
 
