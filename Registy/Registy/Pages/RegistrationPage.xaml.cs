@@ -32,6 +32,11 @@ namespace Registy.Pages
 
         private void RegistrationButton_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
+        {
             NavigationService.Navigate(new AuthorizationPage());
         }
     }

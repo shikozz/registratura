@@ -17,9 +17,6 @@ using System.Windows.Shell;
 
 namespace Registy
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private bool FullScreenMode = false;

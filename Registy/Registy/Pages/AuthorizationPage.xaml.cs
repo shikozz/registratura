@@ -36,7 +36,7 @@ namespace Registy.Pages
 
         private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new BeginPage());
         }
     }
 }

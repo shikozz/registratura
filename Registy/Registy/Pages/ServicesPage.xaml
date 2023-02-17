@@ -1,0 +1,45 @@
+﻿<Page x:Class="Registy.Pages.ServicesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registy.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="ServicesPage">
+
+    <Grid>
+        <Grid Background="#BFEAF5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <ProgressBar
+                Grid.Row="0"
+                Height="57"
+                Margin="80,30,80,0"
+                VerticalAlignment="Top"
+                Maximum="5"
+                Minimum="0"
+                Tag="2" 
+                Value="1"
+                Foreground="#C1F574"
+                Background="#A85947"/>
+
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="48"
+                TextAlignment="Center"
+                Grid.Row="1"
+                TextWrapping="Wrap">
+                Выберите то, что
+                <LineBreak/>
+                требуется
+            </TextBlock>
+            
+        </Grid>
+    </Grid>
+</Page>

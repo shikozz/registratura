@@ -10,11 +10,8 @@
       PreviewMouseDown="Page_PreviewMouseDown">
 
     <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -23,46 +20,56 @@
                     </Grid.RowDefinitions>
 
                     <Label
-                            Content="Регистрация"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            FontSize="48"/>
+                        Content="Регистрация"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontSize="48"/>
 
                     <StackPanel Orientation="Vertical" Width="384" VerticalAlignment="Bottom" Grid.Row="1">
                         <TextBox 
-                                TextAlignment="Center"
-                                x:Name="FullNameTextBox"
-                                Tag="ФИО"
-                                FontSize="30"
-                                Height="70"
-                                Margin="0,0,0,20"/>
+                            TextAlignment="Center"
+                            x:Name="FullNameTextBox"
+                            Tag="ФИО"
+                            FontSize="30"
+                            Height="70"
+                            Margin="0,0,0,20"/>
 
                         <TextBox 
-                                TextAlignment="Center"
-                                Tag="СНИЛС"
-                                FontSize="30"
-                                x:Name="InsuranceNumTextBox"
-                                Height="70"
-                                Margin="0,0,0,20"/>
+                            TextAlignment="Center"
+                            Tag="СНИЛС"
+                            FontSize="30"
+                            x:Name="InsuranceNumTextBox"
+                            Height="70"
+                            Margin="0,0,0,20"/>
 
                         <TextBox
-                                TextAlignment="Center"
-                                Tag="Пароль"
-                                FontSize="30"
-                                Name="PasswordTextBox"
-                                Height="70"
-                                Margin="0,0,0,20"/>
+                            TextAlignment="Center"
+                            Tag="Пароль"
+                            FontSize="30"
+                            Name="PasswordTextBox"
+                            Height="70"
+                            Margin="0,0,0,20"/>
 
                         <Button
-                                x:Name="RegistrationButton"
-                                Content="Ок"
-                                FontSize="48"
-                                Height="96"
-                                Margin="0,0,0,20"
-                                Click="RegistrationButton_Click"/>
+                            x:Name="RegistrationButton"
+                            Content="Ок"
+                            FontSize="48"
+                            Height="96"
+                            Margin="0,0,0,20"
+                            Click="RegistrationButton_Click"/>
                     </StackPanel>
                 </Grid>
             </Border>
         </StackPanel>
+        <Button
+            x:Name="AuthorizationButton"
+            Click="AuthorizationButton_Click"
+            FontSize="32"
+            Content="Авторизация"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="30,0,0,60"
+            Width="308"
+            Height="68"/>
     </Grid>
 </Page>

@@ -107,3 +107,5 @@ D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\Autho
 D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\RegistrationPage.baml
 D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\BeginPage.g.cs
 D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\BeginPage.baml
+D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\ServicesPage.g.cs
+D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\Pages\ServicesPage.baml
