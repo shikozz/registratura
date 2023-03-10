@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\4is2\Ермолаев\registratura-main\Registy\Registy\obj\Debug\
+C:\Users\1\Desktop\registratura-ErmolaevBranch\Registy\Registy\obj\Debug\
 Registy
 none
 false
 DEBUG;TRACE
-D:\4is2\Ермолаев\registratura-main\Registy\Registy\App.xaml
-7434063292
+C:\Users\1\Desktop\registratura-ErmolaevBranch\Registy\Registy\App.xaml
+8121581972
 
-10-709551299
+111071702760
 13152784993
-MainWindow.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\RegistrationPage.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
+MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\RegistrationPage.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
 
 True
 

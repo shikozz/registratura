@@ -55,7 +55,6 @@
                             Content="Ок"
                             FontSize="48"
                             Height="96"
-                            Margin="0,0,0,20"
                             Click="RegistrationButton_Click"/>
 
                         <Button
@@ -63,8 +62,8 @@
                             x:Name="AuthorizationButton"
                             Content="Авторизироваться"
                             FontSize="20"
-                            Height="30"
-                            Margin="0,0,0,20"
+                            Height="25"
+                            Margin="0,25,0,50"
                             Click="AuthorizationButton_Click"/>
                     </StackPanel>
                 </Grid>
