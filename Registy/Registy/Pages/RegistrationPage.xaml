@@ -55,13 +55,21 @@
                             Content="Ок"
                             FontSize="48"
                             Height="96"
-                            Margin="0,0,0,20"
                             Click="RegistrationButton_Click"/>
+
+                        <Button
+                            Style="{StaticResource TransparentButton}"
+                            x:Name="AuthorizationButton"
+                            Content="Авторизироваться"
+                            FontSize="20"
+                            Height="25"
+                            Margin="0,25,0,50"
+                            Click="AuthorizationButton_Click"/>
                     </StackPanel>
                 </Grid>
             </Border>
         </StackPanel>
-        <Button
+        <!--<Button
             x:Name="AuthorizationButton"
             Click="AuthorizationButton_Click"
             FontSize="32"
@@ -70,6 +78,6 @@
             VerticalAlignment="Bottom"
             Margin="30,0,0,60"
             Width="308"
-            Height="68"/>
+            Height="68"/>-->
     </Grid>
 </Page>

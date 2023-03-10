@@ -15,16 +15,14 @@ using System.Windows.Shapes;
 
 namespace Registy.Pages
 {
-    public partial class ServicesPage : Page
+    /// <summary>
+    /// Логика взаимодействия для AdminPanelPage.xaml
+    /// </summary>
+    public partial class AdminPanelPage : Page
     {
-        public ServicesPage()
+        public AdminPanelPage()
         {
             InitializeComponent();
-        }
-
-        private void PreviousPageButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new BeginPage());
         }
     }
 }

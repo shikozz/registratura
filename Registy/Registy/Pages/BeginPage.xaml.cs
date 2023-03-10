@@ -27,9 +27,9 @@ namespace Registy.Pages
             NavigationService.Navigate(new ServicesPage());
         }
 
-        private void PreviousPageButton_Click(object sender, RoutedEventArgs e)
+        private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new BeginPage());
+            NavigationService.Navigate(new AuthorizationPage());
         }
     }
 }

@@ -12,10 +12,11 @@
         <Grid Background="#BFEAF5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="200*"/>
+                <RowDefinition Height="100*"/>
             </Grid.RowDefinitions>
+            
             <ProgressBar
                 Grid.Row="0"
                 Height="57"
@@ -39,7 +40,84 @@
                 <LineBreak/>
                 требуется
             </TextBlock>
-            
+
+            <Grid Grid.Row="2" MaxWidth="1200">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button 
+                        Grid.Row="0"
+                        Height="96"
+                        Width="384"
+                        Content="Запись к врачу"
+                        FontSize="40"/>
+
+                    <Button 
+                        Grid.Row="1"
+                        Height="96"
+                        Width="384"
+                        FontSize="32">
+                        <TextBlock TextAlignment="Center">
+                            Запись на
+                            <LineBreak/>
+                            процедуры
+                        </TextBlock>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button 
+                        Grid.Row="0"
+                        Height="96"
+                        Width="384"
+                        Content="Сдача анализов"
+                        FontSize="40"/>
+
+                    <Button 
+                        Grid.Row="1"
+                        Height="96"
+                        Width="384"
+                        FontSize="32">
+                        <TextBlock TextAlignment="Center">
+                            График работы 
+                            <LineBreak/>
+                            врачей
+                        </TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button   
+                    x:Name="PreviousPageButton"
+                    Click="PreviousPageButton_Click"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Content="Назад"
+                    FontSize="32"
+                    Padding="50, 0"
+                    Height="72"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

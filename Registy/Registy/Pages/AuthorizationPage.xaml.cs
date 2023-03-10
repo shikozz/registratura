@@ -20,11 +20,7 @@ namespace Registy.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
-        }
-
-        private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            NavigationService.Navigate(new RegistrationPage());
+            DataContext = this;
         }
 
         private void Page_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -34,9 +30,19 @@ namespace Registy.Pages
                     Keyboard.Focus(MainGrid); // Предача фокуса основному гриду
         }
 
+        private void Label_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrationPage());
+        }
+
         private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new BeginPage());
+        }
+
+        private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
