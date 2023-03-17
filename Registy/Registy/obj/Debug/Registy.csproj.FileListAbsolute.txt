@@ -195,3 +195,11 @@ D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Registy.csproj.GenerateR
 D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Registy.csproj.CoreCompileInputs.cache
 D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Registy.exe
 D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Registy.pdb
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\dappointment.g.cs
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\dappointment.baml
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\procedure.g.cs
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\procedure.baml
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\analyzes.g.cs
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\schedule.g.cs
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\analyzes.baml
+D:\4ИС2\Ivanov\registratura\Registy\Registy\obj\Debug\Pages\schedule.baml

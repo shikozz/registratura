@@ -59,6 +59,9 @@
     <Compile Include="Pages\AdminPanelPage.xaml.cs">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\analyzes.xaml.cs">
+      <DependentUpon>analyzes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
@@ -67,6 +70,12 @@
     </Compile>
     <Compile Include="Pages\ChangePaaswordPage.xaml.cs">
       <DependentUpon>ChangePaaswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\dappointment.xaml.cs">
+      <DependentUpon>dappointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\procedure.xaml.cs">
+      <DependentUpon>procedure.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
@@ -87,6 +96,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\analyzes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,7 +112,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\dappointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\procedure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\schedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,6 +142,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\schedule.xaml.cs">
+      <DependentUpon>schedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ServicesPage.xaml.cs">
       <DependentUpon>ServicesPage.xaml</DependentUpon>
     </Compile>

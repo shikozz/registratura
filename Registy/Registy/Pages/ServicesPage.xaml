@@ -58,13 +58,13 @@
                         Height="96"
                         Width="384"
                         Content="Запись к врачу"
-                        FontSize="40"/>
+                        FontSize="40" Click="Button_Click"/>
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-                        FontSize="32">
+                        FontSize="32" Click="Button_Click_1">
                         <TextBlock TextAlignment="Center">
                             Запись на
                             <LineBreak/>
@@ -84,13 +84,13 @@
                         Height="96"
                         Width="384"
                         Content="Сдача анализов"
-                        FontSize="40"/>
+                        FontSize="40" Click="Button_Click_2"/>
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-                        FontSize="32">
+                        FontSize="32" Click="Button_Click_3">
                         <TextBlock TextAlignment="Center">
                             График работы 
                             <LineBreak/>

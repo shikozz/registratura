@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\4ИС2\Ivanov\registratura\Registy\Registy\App.xaml
-9-1904797084
+13-643042965
 
-121258086310
+16-1997493224
 13152784993
-MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\ChangePaaswordPage.xaml;Pages\RegistrationPage.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
+MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\analyzes.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\ChangePaaswordPage.xaml;Pages\dappointment.xaml;Pages\procedure.xaml;Pages\RegistrationPage.xaml;Pages\schedule.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
 
-True
+False
 
