@@ -1,7 +1,7 @@
 # -
 LebedevA(shikozz) - teamlead
 
-TimofeeyR(iamiwak) - backend
+TimofeevR(iamiwak) - backend
 
 ErmolaevE(Ermo1aeff) - frontend
 
