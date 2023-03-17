@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\4ИС2\lebedev\registratura\Registy\Registy\obj\Debug\
+D:\4IS2\ivanov\registratura\Registy\Registy\obj\Debug\
 Registy
 none
 false
 DEBUG;TRACE
-D:\4ИС2\lebedev\registratura\Registy\Registy\App.xaml
-9-1904797084
+D:\4IS2\ivanov\registratura\Registy\Registy\App.xaml
+131708262444
 
-112012656094
+15-397928847
 13152784993
-MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\ChangePaaswordPage.xaml;Pages\RegistrationPage.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
+MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\ChangePaaswordPage.xaml;Pages\DoctorsAppointment.xaml;Pages\PassAnalyzies.xaml;Pages\RegistrationPage.xaml;Pages\RegProc.xaml;Pages\Schedule.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
 
 False
 

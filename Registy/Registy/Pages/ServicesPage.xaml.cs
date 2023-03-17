@@ -26,5 +26,30 @@ namespace Registy.Pages
         {
             NavigationService.Navigate(new BeginPage());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DoctorsAppointment());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PassAnalyzies());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegProc());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Schedule());
+        }
+
+        private void StartElipse_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,6 +10,24 @@
         ShadowDepth="4"
         Direction="270"/>
 
+    <!--Круглая кнопка-->
+
+    <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="controlLayout">
+            <Ellipse x:Name="buttonSurface" Fill="LightBlue"/>
+            <Label x:Name="buttonCaption" VerticalAlignment="Center"
+					HorizontalAlignment="Center"
+					FontWeight="Bold" FontSize="20" Content="OK!"/>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="buttonSurface" Property="Fill" Value="Blue"></Setter>
+                <Setter TargetName="buttonCaption" Property="Foreground" Value="Yellow"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
     <!--Базовый стиль кнопки-->
     <Style TargetType="Button" x:Key="BaseButton">
         <Setter Property="Template">

@@ -16,8 +16,62 @@
                 <RowDefinition Height="200*"/>
                 <RowDefinition Height="100*"/>
             </Grid.RowDefinitions>
-            
-            <ProgressBar
+
+            <Line Stroke="Black" StrokeThickness="2" X1="500" Y1="100" X2="-400" Y2="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="536,-64,146,62" Height="104" Width="518"></Line>
+            <Ellipse
+                x:Name="StartElipse"
+                Height="50"
+                Width="50"
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Fill="Green"
+                Margin="0 10 900 10" MouseDown="StartElipse_MouseDown"
+              
+                />
+            <Ellipse
+                x:Name="TwoElipse"
+                Height="50"
+                Width="50"
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Fill="Green"
+           Margin="0 10 450 10"
+                />
+            <Ellipse
+                x:Name="ThreeElipse"
+                Height="50"
+                Width="50"
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Fill="Green"
+              Margin="0 10 0 10"
+                />
+            <Ellipse
+                x:Name="FourElipse"
+                Height="50"
+                Width="50"
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Fill="Green"
+                Margin="450 10 0 10"
+             
+                />
+            <Ellipse
+                x:Name="FiveElipse"
+                Height="50"
+                Width="50"
+                Grid.Row="0"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Fill="Green"
+             Margin="900 10 0 10"
+                />
+
+            <!--<ProgressBar
                 Grid.Row="0"
                 Height="57"
                 Margin="80,30,80,0"
@@ -27,7 +81,7 @@
                 Tag="2" 
                 Value="1"
                 Foreground="#C1F574"
-                Background="#A85947"/>
+                Background="#A85947"/>-->
 
             <TextBlock
                 HorizontalAlignment="Center"
@@ -58,13 +112,13 @@
                         Height="96"
                         Width="384"
                         Content="Запись к врачу"
-                        FontSize="40"/>
+                        FontSize="40" Click="Button_Click"/>
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-                        FontSize="32">
+                        FontSize="32" Click="Button_Click_2">
                         <TextBlock TextAlignment="Center">
                             Запись на
                             <LineBreak/>
@@ -84,13 +138,13 @@
                         Height="96"
                         Width="384"
                         Content="Сдача анализов"
-                        FontSize="40"/>
+                        FontSize="40" Click="Button_Click_1"/>
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-                        FontSize="32">
+                        FontSize="32" Click="Button_Click_3">
                         <TextBlock TextAlignment="Center">
                             График работы 
                             <LineBreak/>
