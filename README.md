@@ -1,9 +1,14 @@
 # -
 LebedevA(shikozz) - teamlead
+
 TimofeeyR(iamiwak) - backend
+
 ErmolaevE(Ermo1aeff) - frontend
+
 IvanovI(SoulYoki) - frontend
+
 BabevT(betterexistence) - backend/dms
+
 ----------------------
 Info
 
