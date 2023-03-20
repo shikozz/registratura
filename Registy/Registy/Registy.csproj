@@ -65,6 +65,15 @@
     <Compile Include="Pages\BeginPage.xaml.cs">
       <DependentUpon>BeginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ChangePaaswordPage.xaml.cs">
+      <DependentUpon>ChangePaaswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DoctorsAppointment.xaml.cs">
+      <DependentUpon>DoctorsAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PassAnalyzies.xaml.cs">
+      <DependentUpon>PassAnalyzies.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
@@ -92,17 +101,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ChangePaaswordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DoctorsAppointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PassAnalyzies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< Updated upstream
-=======
     <Page Include="Pages\SchedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
->>>>>>> Stashed changes
     <Page Include="Pages\ServicesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,12 +135,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-=======
     <Compile Include="Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="Pages\ServicesPage.xaml.cs">
       <DependentUpon>ServicesPage.xaml</DependentUpon>
     </Compile>
@@ -156,12 +171,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
   <ItemGroup>
     <Resource Include="Images\back.png" />
   </ItemGroup>
->>>>>>> Stashed changes
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

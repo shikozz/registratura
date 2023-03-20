@@ -26,8 +26,6 @@ namespace Registy.Pages
         {
             NavigationService.Navigate(new BeginPage());
         }
-<<<<<<< Updated upstream
-=======
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -53,6 +51,5 @@ namespace Registy.Pages
         {
 
         }
->>>>>>> Stashed changes
     }
 }

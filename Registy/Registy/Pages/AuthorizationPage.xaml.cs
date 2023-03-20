@@ -44,5 +44,15 @@ namespace Registy.Pages
         {
             NavigationService.Navigate(new SchedulePage());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new BeginPage());
+        }
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new BeginPage());
+        }
     }
 }

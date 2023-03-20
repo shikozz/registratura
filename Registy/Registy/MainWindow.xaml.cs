@@ -38,7 +38,7 @@ namespace Registy
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            RootFrame.Navigate(new RegistrationPage());
+            RootFrame.Navigate(new BeginPage());
             Window_StateChanged(null, null);
         }
 

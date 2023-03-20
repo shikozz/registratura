@@ -4,30 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< Updated upstream
-C:\Users\1\Desktop\registratura-ErmolaevBranch\Registy\Registy\obj\Debug\
-=======
-C:\Users\1\Desktop\registratura\Registy\Registy\obj\Debug\
->>>>>>> Stashed changes
+C:\Users\1\Desktop\registratura-main\Registy\Registy\obj\Debug\
 Registy
 none
 false
 DEBUG;TRACE
-<<<<<<< Updated upstream
-C:\Users\1\Desktop\registratura-ErmolaevBranch\Registy\Registy\App.xaml
-8121581972
-
-101826272544
-13152784993
-MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\RegistrationPage.xaml;Pages\ServicesPage.xaml;Styles\ComponentStyles.xaml;Styles\Geometries.xaml;
-=======
-C:\Users\1\Desktop\registratura\Registy\Registy\App.xaml
+C:\Users\1\Desktop\registratura-main\Registy\Registy\App.xaml
 122079576299
 
 142129440247
 13152784993
 MainWindow.xaml;Pages\AdminPanelPage.xaml;Pages\AuthorizationPage.xaml;Pages\BeginPage.xaml;Pages\ChangePaaswordPage.xaml;Pages\DoctorsAppointment.xaml;Pages\PassAnalyzies.xaml;Pages\RegistrationPage.xaml;Pages\SchedulePage.xaml;Pages\ServicesPage.xaml;Resources\Styles.xaml;Resources\Geometries.xaml;
->>>>>>> Stashed changes
 
 False
 

@@ -33,42 +33,33 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="30"
-                Text="Degenarates like you belong on a cross"/>
+                Text="Cross"/>
 
-            <Button
-                x:Name="BeginButton"
-                Click="BeginButton_Click"
-                Grid.Row="2"
-                Width="384"
-                Height="96"
-                FontSize="48"
-                Content="Начать"/>
-
-
-        </Grid>
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75*"/>
-                <RowDefinition Height="25*"/>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
+
                 <Button
-                    Grid.Row="1"
+                    Grid.Column="0"
                     x:Name="AuthorizationButton"
                     Click="AuthorizationButton_Click"
-                    FontSize="32"
+                    FontSize="48"
                     Content="Логин"
                     HorizontalAlignment="Center"
-                    Padding="50,0"
-                    Height="72"/>
+                    Width="384"
+                    Height="96"/>
+
+                <Button
+                    x:Name="BeginButton"
+                    Click="BeginButton_Click"
+                    Grid.Column="1"
+                    Width="384"
+                    Height="96"
+                    FontSize="48"
+                    Content="Начать"/>
             </Grid>
         </Grid>
     </Grid>

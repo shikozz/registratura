@@ -15,6 +15,11 @@
     </Page.Resources>
 
     <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+        <Button Background="Transparent" BorderBrush="{x:Null}" Height="50" Width="50"  Style="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40 0 0 30" Click="Button_Click"  >
+            <Image Source="/Images/back.png"/>
+        </Button>
+        <Label  Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Margin="100 0 0 40" MouseDown="Label_MouseDown"></Label>
+
 
         <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
             <StackPanel HorizontalAlignment="Center">
@@ -57,7 +62,7 @@
                     FontSize="36"
                     Margin="0,0,0,15"
                     Click="AuthorizationButton_Click"/>
-
+             
                 <Button 
                     x:Name="ChangePasswordButton"
                     Style="{StaticResource TransparentButton}"
@@ -67,6 +72,7 @@
                     HorizontalAlignment="Center"
                     Click="ChangePasswordButton_Click"/>
 
+             
             </StackPanel>
         </Border>
 

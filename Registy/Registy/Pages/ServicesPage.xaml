@@ -16,20 +16,6 @@
                 <RowDefinition Height="200*"/>
                 <RowDefinition Height="100*"/>
             </Grid.RowDefinitions>
-<<<<<<< Updated upstream
-            
-            <ProgressBar
-                Grid.Row="0"
-                Height="57"
-                Margin="80,30,80,0"
-                VerticalAlignment="Top"
-                Maximum="5"
-                Minimum="0"
-                Tag="2" 
-                Value="1"
-                Foreground="#C1F574"
-                Background="#A85947"/>
-=======
 
             <Grid Height="100">
                 <Grid.ColumnDefinitions>
@@ -80,7 +66,6 @@
                     Grid.ColumnSpan="2"
                     Style="{StaticResource ProgressBarButton}"/>
             </Grid>
->>>>>>> Stashed changes
 
             <TextBlock
                 HorizontalAlignment="Center"
@@ -111,23 +96,15 @@
                         Height="96"
                         Width="384"
                         Content="Запись к врачу"
-<<<<<<< Updated upstream
-                        FontSize="40"/>
-=======
                         FontSize="40" 
                         Click="Button_Click"/>
->>>>>>> Stashed changes
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-<<<<<<< Updated upstream
-                        FontSize="32">
-=======
                         FontSize="32" 
                         Click="Button_Click_2">
->>>>>>> Stashed changes
                         <TextBlock TextAlignment="Center">
                             Запись на
                             <LineBreak/>
@@ -147,13 +124,13 @@
                         Height="96"
                         Width="384"
                         Content="Сдача анализов"
-                        FontSize="40"/>
+                        FontSize="40" Click="Button_Click_1"/>
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
-                        FontSize="32">
+                        FontSize="32" Click="Button_Click_3">
                         <TextBlock TextAlignment="Center">
                             График работы 
                             <LineBreak/>
