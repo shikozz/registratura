@@ -9,6 +9,11 @@
       Title="AuthorizationPage"
       PreviewMouseDown="Page_PreviewMouseDown">
 
+    <Page.Resources>
+        <!--Стиль скруглённой кнопки (на тёмно-голубом фоне)-->
+        <Style TargetType="Button" BasedOn="{StaticResource OnDarkBlueButton}"/>
+    </Page.Resources>
+
     <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
 
         <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">

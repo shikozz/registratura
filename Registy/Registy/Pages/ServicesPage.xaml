@@ -16,6 +16,7 @@
                 <RowDefinition Height="200*"/>
                 <RowDefinition Height="100*"/>
             </Grid.RowDefinitions>
+<<<<<<< Updated upstream
             
             <ProgressBar
                 Grid.Row="0"
@@ -28,6 +29,58 @@
                 Value="1"
                 Foreground="#C1F574"
                 Background="#A85947"/>
+=======
+
+            <Grid Height="100">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Style="{StaticResource LineButton}"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="8"/>
+
+                <Button
+                    Background="#8CA9F5"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ProgressBarButton}"/>
+
+                <Button
+                    Background="#A85947"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ProgressBarButton}"/>
+
+                <Button
+                    Background="#A85947"
+                    Grid.Column="4"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ProgressBarButton}"/>
+
+                <Button
+                    Background="#A85947"
+                    Grid.Column="6"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ProgressBarButton}"/>
+
+                <Button
+                    Background="#A85947"
+                    Grid.Column="8"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource ProgressBarButton}"/>
+            </Grid>
+>>>>>>> Stashed changes
 
             <TextBlock
                 HorizontalAlignment="Center"
@@ -58,13 +111,23 @@
                         Height="96"
                         Width="384"
                         Content="Запись к врачу"
+<<<<<<< Updated upstream
                         FontSize="40"/>
+=======
+                        FontSize="40" 
+                        Click="Button_Click"/>
+>>>>>>> Stashed changes
 
                     <Button 
                         Grid.Row="1"
                         Height="96"
                         Width="384"
+<<<<<<< Updated upstream
                         FontSize="32">
+=======
+                        FontSize="32" 
+                        Click="Button_Click_2">
+>>>>>>> Stashed changes
                         <TextBlock TextAlignment="Center">
                             Запись на
                             <LineBreak/>

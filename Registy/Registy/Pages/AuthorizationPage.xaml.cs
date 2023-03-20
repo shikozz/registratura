@@ -42,7 +42,7 @@ namespace Registy.Pages
 
         private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new SchedulePage());
         }
     }
 }
