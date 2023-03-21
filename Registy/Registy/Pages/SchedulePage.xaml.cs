@@ -24,5 +24,13 @@ namespace Registy.Pages
         {
             InitializeComponent();
         }
+
+        private void OnRequestBringIntoView(object sender, RequestBringIntoViewEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.Down) || Keyboard.IsKeyDown(Key.Up))
+                return;
+
+            e.Handled = true;
+        }
     }
 }

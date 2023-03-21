@@ -10,13 +10,18 @@
       Background="#BFEAF5">
 
     <Grid>
-        <ComboBox   
-            Margin="787,99,0,0" 
+        <ComboBox
+            IsEditable="False"
             VerticalAlignment="Top" 
-            HorizontalAlignment="Right"
+            HorizontalAlignment="Center"
+            Margin="0,100"
             Width="346"
             Height="74"
             SelectedIndex="0">
+            <ComboBox.RenderTransform>
+                <RotateTransform></RotateTransform>
+            </ComboBox.RenderTransform>
+
             <ComboBoxItem Content="Специальность"/>
             <ComboBoxItem Content="Врач стомотолог-хирург"/>
             <ComboBoxItem Content="Оториноларинголог"/>
@@ -45,14 +50,5 @@
             <ComboBoxItem Content="Хирург"/>
             <ComboBoxItem Content="Хирург"/>
         </ComboBox>
-
-        <Grid Height="100"
-              Width="100">
-            <Path
-                StrokeThickness="1"
-                Stroke="Black"
-                Stretch="Fill"
-                Data="M11 10L21 1 M11 10L1 1"/>
-        </Grid>
     </Grid>
 </Page>

@@ -62,7 +62,7 @@
                     FontSize="36"
                     Margin="0,0,0,15"
                     Click="AuthorizationButton_Click"/>
-             
+
                 <Button 
                     x:Name="ChangePasswordButton"
                     Style="{StaticResource TransparentButton}"
@@ -72,10 +72,8 @@
                     HorizontalAlignment="Center"
                     Click="ChangePasswordButton_Click"/>
 
-             
             </StackPanel>
         </Border>
-
     </Grid>
 </Page>
     
