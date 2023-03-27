@@ -15,19 +15,24 @@ using System.Windows.Shapes;
 
 namespace Registy.Pages
 {
-    public partial class SchedulePage : Page
+    /// <summary>
+    /// Логика взаимодействия для DoctorsListDlgPage.xaml
+    /// </summary>
+    public partial class DoctorsListDlgPage : Page
     {
-        public SchedulePage()
+        public DoctorsListDlgPage()
         {
             InitializeComponent();
         }
 
-        private void OnRequestBringIntoView(object sender, RequestBringIntoViewEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Keyboard.IsKeyDown(Key.Down) || Keyboard.IsKeyDown(Key.Up))
-                return;
+            NavigationService.Navigate(new DoctorsListPage());
+        }
 
-            e.Handled = true;
+        private void CommitButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

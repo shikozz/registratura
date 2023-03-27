@@ -71,6 +71,12 @@
     <Compile Include="Pages\DoctorsAppointment.xaml.cs">
       <DependentUpon>DoctorsAppointment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DoctorsListDlgPage.xaml.cs">
+      <DependentUpon>DoctorsListDlgPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DoctorsListPage.xaml.cs">
+      <DependentUpon>DoctorsListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PassAnalyzies.xaml.cs">
       <DependentUpon>PassAnalyzies.xaml</DependentUpon>
     </Compile>
@@ -107,6 +113,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\DoctorsAppointment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DoctorsListDlgPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DoctorsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -24,5 +24,30 @@ namespace Registy.Pages
         {
             InitializeComponent();
         }
+
+        private void ScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DoctorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DoctorsListPage());
+        }
+
+        private void CabinetsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PatientsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new RegistrationPage());
+        }
     }
 }

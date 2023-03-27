@@ -5,11 +5,95 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Registy.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="900" d:DesignWidth="1200"
       Title="AdminPanelPage"
       Background="#BFEAF5">
 
-    <Grid>
+    <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--=====Удалить недоразумение и сделать нормально=====-->
+        <Button 
+            Grid.Row="2" 
+            Background="Transparent" 
+            BorderBrush="{x:Null}" 
+            Height="50" Width="50"  
+            Style="{x:Null}" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Bottom"
+            Margin="40 0 0 30" 
+            Click="Button_Click">
+            <Image Source="/Images/back.png"/>
+        </Button>
         
+        <Label 
+            Grid.Row="2"  
+            Content="Назад" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Bottom" 
+            FontSize="15"
+            Margin="100 0 0 40"/>
+        <!--=============-->
+
+        <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextAlignment="Center"
+            FontSize="48">
+            Панель 
+            <LineBreak/>
+            администратора
+            </TextBlock>
+
+        <StackPanel 
+            Orientation="Vertical" 
+            Width="384" 
+            Grid.Row="1">
+
+            <Button
+                Margin="0,0,0,40"
+                x:Name="ScheduleButton"
+                Content="Распиание"
+                FontSize="48"
+                Height="96"
+                Click="ScheduleButton_Click"/>
+
+            <Button
+                Margin="0,0,0,40"
+                x:Name="DoctorsButton"
+                Content="Врачи"
+                FontSize="48"
+                Height="96"
+                Click="DoctorsButton_Click"/>
+
+            <Button
+                Margin="0,0,0,40"
+                x:Name="CabinetsButton"
+                Content="Кабинеты"
+                FontSize="48"
+                Height="96"
+                Click="CabinetsButton_Click"/>
+
+            <Button
+                x:Name="PatientsButton"
+                Content="Пациенты"
+                FontSize="48"
+                Height="96"
+                Click="PatientsButton_Click"/>
+        </StackPanel>
     </Grid>
+        <!--<Button
+            x:Name="AuthorizationButton"
+            Click="AuthorizationButton_Click"
+            FontSize="32"
+            Content="Авторизация"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Margin="30,0,0,60"
+            Width="308"
+            Height="68"/>-->
 </Page>

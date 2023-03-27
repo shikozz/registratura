@@ -15,7 +15,6 @@
     </Page.Resources>
 
     <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
-
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
                 <Grid>

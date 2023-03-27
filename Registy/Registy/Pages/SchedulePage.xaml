@@ -18,9 +18,6 @@
             Width="346"
             Height="74"
             SelectedIndex="0">
-            <ComboBox.RenderTransform>
-                <RotateTransform></RotateTransform>
-            </ComboBox.RenderTransform>
 
             <ComboBoxItem Content="Специальность"/>
             <ComboBoxItem Content="Врач стомотолог-хирург"/>
@@ -50,5 +47,7 @@
             <ComboBoxItem Content="Хирург"/>
             <ComboBoxItem Content="Хирург"/>
         </ComboBox>
+        <DataGrid HorizontalAlignment="Left" Height="294" Margin="366,278,0,0" VerticalAlignment="Top" Width="446" Style="{StaticResource DataGridStyle}">
+        </DataGrid>
     </Grid>
 </Page>

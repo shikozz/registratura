@@ -37,7 +37,8 @@ namespace Registy.Pages
 
         private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new BeginPage());
+            //NavigationService.Navigate(new BeginPage());
+            NavigationService.Navigate(new AdminPanelPage());
         }
 
         private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
