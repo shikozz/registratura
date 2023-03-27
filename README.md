@@ -1,5 +1,5 @@
 # -
-LebedevA(shikozz) - teamlead
+LebedevA(shikozz) - gruppenführer
 
 TimofeevR(iamiwak) - backend
 
