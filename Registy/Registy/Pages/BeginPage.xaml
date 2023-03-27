@@ -10,6 +10,12 @@
 
     <Grid Background="#BFEAF5" x:Name="MainGrid">
         <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -18,49 +24,45 @@
 
             <TextBlock
                 Grid.Row="0"
+                Grid.Column="1"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="64"
+                VerticalAlignment="Bottom"
+                FontSize="60"
                 TextAlignment="Center"
                 TextWrapping="Wrap">
-                Привет, у тебя
-                <LineBreak />
-                снова проблемы?
+                Привет, у тебя снова проблемы?
             </TextBlock>
 
             <TextBlock
+                Grid.Column="1"
                 Grid.Row="1"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="30"
-                Text="Cross"/>
+                Text="CHANGE IT TO HEALTH SIGN"/>
 
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-
-                <Button
-                    Grid.Column="0"
+            <Button Grid.Column="1"
                     x:Name="AuthorizationButton"
-                    Click="AuthorizationButton_Click"
-                    FontSize="48"
-                    Content="Логин"
-                    HorizontalAlignment="Center"
-                    Width="384"
-                    Height="96"/>
+                    Grid.Row="2"
+                    Click="OnAuthorizationButtonClick"
+                    FontSize="28"
+                    Height="64"
+                    Padding="16"
+                    Content="Войти"
+                    VerticalAlignment="Bottom"
+                    Width="256"
+                    Margin="0,0,0,24"
+                    HorizontalAlignment="Center"/>
 
-                <Button
-                    x:Name="BeginButton"
-                    Click="BeginButton_Click"
+            <Button x:Name="BeginButton"
+                    Click="OnBeginButtonClick"
                     Grid.Column="1"
-                    Width="384"
+                    Grid.Row="2"
+                    Width="512"
                     Height="96"
-                    FontSize="48"
+                    Margin="0,0,0,48"
+                    FontSize="42"
                     Content="Начать"/>
-            </Grid>
         </Grid>
     </Grid>
 </Page>

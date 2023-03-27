@@ -45,12 +45,12 @@ namespace Registy.Pages
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new BeginPage());
         }
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        private void OnBackButtonClick(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new BeginPage());
         }

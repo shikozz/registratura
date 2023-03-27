@@ -10,9 +10,9 @@
         MinHeight="900" MinWidth="1200"
         WindowStyle="SingleBorderWindow"
         WindowStartupLocation="CenterScreen"
-        Loaded="Window_Loaded"
-        KeyDown="Window_KeyDown"
-        StateChanged="Window_StateChanged">
+        Loaded="OnWindowLoad"
+        KeyDown="OnWindowKeyDown"
+        StateChanged="OnWindowStateChanged">
     
     <WindowChrome.WindowChrome>
         <WindowChrome 
@@ -37,7 +37,7 @@
                         Width="32" Height="32"
                         HorizontalAlignment="Right"
                         Style="{StaticResource MinimizeButton}"
-                        Click="MinimizeButton_Click"
+                        Click="OnMinimizeButtonClick"
                         WindowChrome.IsHitTestVisibleInChrome="True"
                         Margin="0,0,16,0"/>
 
@@ -46,13 +46,13 @@
                         Width="32" Height="32"
                         HorizontalAlignment="Right"
                         Style="{StaticResource CloseButton}"
-                        Click="CloseButton_Click"
+                        Click="OnCloseButtonClick"
                         WindowChrome.IsHitTestVisibleInChrome="True"
                         Margin="0,0,16,0"/>
                 </StackPanel>
             </Grid>
 
-            <Frame x:Name="RootFrame" NavigationUIVisibility="Hidden" LoadCompleted="RootFrame_LoadCompleted" Grid.Row="1"/>
+            <Frame x:Name="RootFrame" NavigationUIVisibility="Hidden" LoadCompleted="OnRootFrameLoadCompleted" Grid.Row="1"/>
         </Grid>
     </Border>
 </Window>

@@ -10,10 +10,12 @@
       PreviewMouseDown="Page_PreviewMouseDown">
 
     <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
-        <Button Background="Transparent" BorderBrush="{x:Null}" Height="50" Width="50"  Style="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="40 0 0 30" Click="Button_Click"  >
-            <Image Source="/Images/back.png"/>
-        </Button>
-        <Label  Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Margin="100 0 0 40" MouseDown="Label_MouseDown"></Label>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16, 16, 0, 0">
+            <Button Background="Transparent" BorderBrush="{x:Null}" Height="48" Width="48"  Style="{x:Null}">
+                <Image Source="/Images/back.png"/>
+            </Button>
+            <Label  Content="Назад" FontSize="24" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
+        </StackPanel>
 
 
         <Border Width="500" Height="574" CornerRadius="26" Background="#A2D2DE">
