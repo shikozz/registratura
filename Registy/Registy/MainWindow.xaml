@@ -24,7 +24,7 @@
     </WindowChrome.WindowChrome>
 
     <Border x:Name="MainBorder">
-        <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+        <Grid Background="{StaticResource BackgroundColor}" Focusable="True" x:Name="MainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="36"/>
                 <RowDefinition Height="*"/>

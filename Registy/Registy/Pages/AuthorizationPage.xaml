@@ -9,7 +9,7 @@
       Title="AuthorizationPage"
       PreviewMouseDown="Page_PreviewMouseDown">
 
-    <Grid Background="#BFEAF5" Focusable="True" x:Name="MainGrid">
+    <Grid Background="{StaticResource BackgroundColor}" Focusable="True" x:Name="MainGrid">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16, 16, 0, 0">
             <Button Background="Transparent" BorderBrush="{x:Null}" Height="48" Width="48"  Style="{x:Null}">
                 <Image Source="/Images/back.png"/>

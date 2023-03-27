@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RegModelStoreContainer" CdmEntityContainer="RegEntities">
+    <EntitySetMapping Name="AnalyzeNames">
+      <EntityTypeMapping TypeName="RegModel.AnalyzeNames">
+        <MappingFragment StoreEntitySet="AnalyzeNames">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="roomId" ColumnName="roomId" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="RegModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="analyzeId" ColumnName="analyzeId" />
+          <ScalarProperty Name="procId" ColumnName="procId" />
+          <ScalarProperty Name="docId" ColumnName="docId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonRooms">
+      <EntityTypeMapping TypeName="RegModel.PersonRooms">
+        <MappingFragment StoreEntitySet="PersonRooms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="personId" ColumnName="personId" />
+          <ScalarProperty Name="roomId" ColumnName="roomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="RegModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="snils" ColumnName="snils" />
+          <ScalarProperty Name="fio" ColumnName="fio" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="number" ColumnName="number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSpecializations">
+      <EntityTypeMapping TypeName="RegModel.PersonSpecializations">
+        <MappingFragment StoreEntitySet="PersonSpecializations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="specId" ColumnName="specId" />
+          <ScalarProperty Name="personId" ColumnName="personId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcedureNames">
+      <EntityTypeMapping TypeName="RegModel.ProcedureNames">
+        <MappingFragment StoreEntitySet="ProcedureNames">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="roomId" ColumnName="roomId" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdecuresToShedule">
+      <EntityTypeMapping TypeName="RegModel.ProdecuresToShedule">
+        <MappingFragment StoreEntitySet="ProdecuresToShedule">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="procId" ColumnName="procId" />
+          <ScalarProperty Name="sheduleId" ColumnName="sheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="RegModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="RegModel.Rooms">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule">
+      <EntityTypeMapping TypeName="RegModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="snils" ColumnName="snils" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specializations">
+      <EntityTypeMapping TypeName="RegModel.Specializations">
+        <MappingFragment StoreEntitySet="Specializations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RegModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RegModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="personId" ColumnName="personId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

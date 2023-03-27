@@ -36,8 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,6 +65,60 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Base\AnalyzeNames.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Orders.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PersonRooms.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Persons.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\PersonSpecializations.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ProcedureNames.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ProdecuresToShedule.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\RegModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\RegModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\RegModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Roles.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Rooms.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Schedule.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Specializations.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\sysdiagrams.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Users.cs">
+      <DependentUpon>RegModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminPanelPage.xaml.cs">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
     </Compile>
@@ -65,8 +128,11 @@
     <Compile Include="Pages\BeginPage.xaml.cs">
       <DependentUpon>BeginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChangePaaswordPage.xaml.cs">
-      <DependentUpon>ChangePaaswordPage.xaml</DependentUpon>
+    <Compile Include="Pages\ChangePasswordPAge.xaml.cs">
+      <DependentUpon>ChangePasswordPAge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChoiceAppointmentDatePage.xaml.cs">
+      <DependentUpon>ChoiceAppointmentDatePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\DoctorsAppointment.xaml.cs">
       <DependentUpon>DoctorsAppointment.xaml</DependentUpon>
@@ -77,6 +143,7 @@
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SourceCore.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,7 +168,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ChangePaaswordPage.xaml">
+    <Page Include="Pages\ChangePasswordPAge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChoiceAppointmentDatePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +236,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Base\RegModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RegModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Base\RegModel.edmx.diagram">
+      <DependentUpon>RegModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <Resource Include="Fonts\Comfortaa-Medium.ttf" />
     <Resource Include="Fonts\Comfortaa-Bold.ttf" />
     <Resource Include="Fonts\Comfortaa-Regular.ttf" />
@@ -180,6 +259,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\left_arrow_icon.png" />
+    <Resource Include="Images\right_arrow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Base\RegModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+      <LastGenOutput>RegModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Base\RegModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegModel.edmx</DependentUpon>
+      <LastGenOutput>RegModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
