@@ -1,0 +1,82 @@
+﻿<Page x:Class="Registy.Pages.ChoiceAppointmentDatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Registy.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="ChoiceAppointmentDatePage">
+
+    <Grid Background="{StaticResource BackgroundColor}">
+        <StackPanel>
+            <Grid>
+                <Line X1="174"
+                      Y1="40"
+                      X2="1026"
+                      Y2="40"
+                      Stroke="Black"
+                      StrokeThickness="2" />
+
+                <Ellipse x:Name="StartElipse"
+                         Height="48"
+                         Width="48"
+                         Grid.Row="0"
+                         VerticalAlignment="Top"
+                         Stroke="Black"
+                         StrokeThickness="2"
+                         HorizontalAlignment="Center"
+                         Fill="{StaticResource PassedStateColor}"
+                         Margin="0, 16, 900, 16" />
+
+                <Ellipse x:Name="TwoElipse"
+                         Height="48"
+                         Stroke="Black"
+                         StrokeThickness="2"
+                         Width="48"
+                         Grid.Row="0"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Center"
+                         Fill="{StaticResource PassedStateColor}"
+                         Margin="0 16 450 16" />
+
+                <Ellipse x:Name="ThreeElipse"
+                         Height="48"
+                         Stroke="Black"
+                         StrokeThickness="2"
+                         Width="48"
+                         Grid.Row="0"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Center"
+                         Fill="{StaticResource CurrentStateColor}"
+                         Margin="0, 16" />
+
+                <Ellipse x:Name="FourElipse"
+                         Height="48"
+                         Width="48"
+                         Grid.Row="0"
+                         Stroke="Black"
+                         StrokeThickness="2"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Center"
+                         Fill="{StaticResource ClosedStateColor}"
+                         Margin="450, 16, 0, 16" />
+
+                <Ellipse x:Name="FiveElipse"
+                         Height="48"
+                         Width="48"
+                         Grid.Row="0"
+                         Stroke="Black"
+                         StrokeThickness="2"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Center"
+                         Fill="{StaticResource ClosedStateColor}"
+                         Margin="900, 16 0, 16" />
+            </Grid>
+
+            <TextBlock Text="Выбор даты приема"
+                       FontSize="42"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</Page>

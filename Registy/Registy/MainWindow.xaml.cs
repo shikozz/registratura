@@ -19,33 +19,34 @@ namespace Registy
 {
     public partial class MainWindow : Window
     {
-        private bool FullScreenMode = false;
-        private WindowState WinState;
+        private bool _isFullScreen = false;
+        private WindowState _windowState;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        private void OnMinimizeButtonClick(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void OnCloseButtonClick(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void OnWindowLoad(object sender, RoutedEventArgs e)
         {
             RootFrame.Navigate(new BeginPage());
-            Window_StateChanged(null, null);
+            OnWindowStateChanged(null, null);
         }
 
         // Деформация окна под полноэкранный режим
-        private void Window_StateChanged(object sender, EventArgs e)
+        private void OnWindowStateChanged(object sender, EventArgs e)
         {
-            if (!FullScreenMode)
+            if (!_isFullScreen)
             {
                 if (WindowState == WindowState.Maximized)
                 {
@@ -61,15 +62,15 @@ namespace Registy
         }
 
         // Полноэкранный режим на F11
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void OnWindowKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F11)
             {
-                FullScreenMode = !FullScreenMode;
+                _isFullScreen = !_isFullScreen;
 
-                if (FullScreenMode)
+                if (_isFullScreen)
                 {
-                    WinState = WindowState;
+                    _windowState = WindowState;
                     MainBorder.Padding = new Thickness(0);
                     WindowStyle = WindowStyle.None;
                     WindowState = WindowState.Minimized;
@@ -87,14 +88,14 @@ namespace Registy
                     };
 
                     WindowState = WindowState.Normal;
-                    WindowState = WinState;
+                    WindowState = _windowState;
                     WindowChrome.SetWindowChrome(this, NewWindowChrome);
                     WindowStyle = WindowStyle.SingleBorderWindow;
                 }
             }
         }
 
-        private void RootFrame_LoadCompleted(object sender, NavigationEventArgs e)
+        private void OnRootFrameLoadCompleted(object sender, NavigationEventArgs e)
         {
 
         }

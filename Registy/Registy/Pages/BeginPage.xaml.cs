@@ -22,12 +22,12 @@ namespace Registy.Pages
             InitializeComponent();
         }
 
-        private void BeginButton_Click(object sender, RoutedEventArgs e)
+        private void OnBeginButtonClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ServicesPage());
         }
 
-        private void AuthorizationButton_Click(object sender, RoutedEventArgs e)
+        private void OnAuthorizationButtonClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AuthorizationPage());
         }

@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Registy"
              StartupUri="MainWindow.xaml">
-    
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/ComponentStyles.xaml"/>
                 <ResourceDictionary Source="Styles/Geometries.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
             <FontFamily x:Key="ComfortaaBold">pack://application:,,,/Fonts/#Comfortaa Bold</FontFamily>
             <FontFamily x:Key="ComfortaaLight">pack://application:,,,/Fonts/#Comfortaa Light</FontFamily>
             <FontFamily x:Key="ComfortaaMedium">pack://application:,,,/Fonts/#Comfortaa Medium</FontFamily>

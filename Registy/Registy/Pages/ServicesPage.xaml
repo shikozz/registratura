@@ -1,127 +1,121 @@
 ﻿<Page x:Class="Registy.Pages.ServicesPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Registy.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1200"
+      mc:Ignorable="d"
+      d:DesignHeight="800"
+      d:DesignWidth="1200"
       Title="ServicesPage">
 
     <Grid>
-        <Grid Background="#BFEAF5">
+        <Grid Background="{StaticResource BackgroundColor}">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="100*"/>
-                <RowDefinition Height="200*"/>
-                <RowDefinition Height="100*"/>
+                <RowDefinition Height="82" />
+                <RowDefinition Height="100*" />
+                <RowDefinition Height="200*" />
+                <RowDefinition Height="100*" />
             </Grid.RowDefinitions>
 
-            <Line Stroke="Black" StrokeThickness="2" X1="500" Y1="100" X2="-400" Y2="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="536,-64,146,62" Height="104" Width="518"></Line>
-            <Ellipse
-                x:Name="StartElipse"
-                Height="50"
-                Width="50"
-                Grid.Row="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Fill="Green"
-                Margin="0 10 900 10" MouseDown="StartElipse_MouseDown"
-              
-                />
-            <Ellipse
-                x:Name="TwoElipse"
-                Height="50"
-                Width="50"
-                Grid.Row="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Fill="Green"
-           Margin="0 10 450 10"
-                />
-            <Ellipse
-                x:Name="ThreeElipse"
-                Height="50"
-                Width="50"
-                Grid.Row="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Fill="Green"
-              Margin="0 10 0 10"
-                />
-            <Ellipse
-                x:Name="FourElipse"
-                Height="50"
-                Width="50"
-                Grid.Row="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Fill="Green"
-                Margin="450 10 0 10"
-             
-                />
-            <Ellipse
-                x:Name="FiveElipse"
-                Height="50"
-                Width="50"
-                Grid.Row="0"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Center"
-                Fill="Green"
-             Margin="900 10 0 10"
-                />
+            <Line Stroke="Black"
+                  StrokeThickness="2"
+                  X1="174"
+                  Y1="40"
+                  X2="1026"
+                  Y2="40" />
 
-            <!--<ProgressBar
-                Grid.Row="0"
-                Height="57"
-                Margin="80,30,80,0"
-                VerticalAlignment="Top"
-                Maximum="5"
-                Minimum="0"
-                Tag="2" 
-                Value="1"
-                Foreground="#C1F574"
-                Background="#A85947"/>-->
+            <Ellipse x:Name="StartElipse"
+                     Height="50"
+                     Width="50"
+                     Grid.Row="0"
+                     VerticalAlignment="Top"
+                     Stroke="Black"
+                     StrokeThickness="2"
+                     HorizontalAlignment="Center"
+                     Fill="{StaticResource CurrentStateColor}"
+                     Margin="0, 16, 900, 16"
+                     MouseDown="StartElipse_MouseDown" />
+            
+            <Ellipse x:Name="TwoElipse"
+                     Height="50"
+                     Stroke="Black"
+                     StrokeThickness="2"
+                     Width="50"
+                     Grid.Row="0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center"
+                     Fill="{StaticResource ClosedStateColor}"
+                     Margin="0, 16, 450, 16" />
+            
+            <Ellipse x:Name="ThreeElipse"
+                     Height="50"
+                     Stroke="Black"
+                     StrokeThickness="2"
+                     Width="50"
+                     Grid.Row="0"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center"
+                     Fill="{StaticResource ClosedStateColor}"
+                     Margin="0, 16" />
+            
+            <Ellipse x:Name="FourElipse"
+                     Height="50"
+                     Width="50"
+                     Grid.Row="0"
+                     Stroke="Black"
+                     StrokeThickness="2"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center"
+                     Fill="{StaticResource ClosedStateColor}"
+                     Margin="450, 16, 0, 16" />
+            
+            <Ellipse x:Name="FiveElipse"
+                     Height="50"
+                     Width="50"
+                     Grid.Row="0"
+                     Stroke="Black"
+                     StrokeThickness="2"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center"
+                     Fill="{StaticResource ClosedStateColor}"
+                     Margin="900, 16, 0, 16" />
 
-            <TextBlock
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="48"
-                TextAlignment="Center"
-                Grid.Row="1"
-                TextWrapping="Wrap">
-                Выберите то, что
-                <LineBreak/>
-                требуется
-            </TextBlock>
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="40"
+                       TextAlignment="Center"
+                       Grid.Row="1"
+                       Text="Выберите то, что требуется"/>
 
-            <Grid Grid.Row="2" MaxWidth="1200">
+            <Grid Grid.Row="2"
+                  MaxWidth="1200">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <Button 
-                        Grid.Row="0"
-                        Height="96"
-                        Width="384"
-                        Content="Запись к врачу"
-                        FontSize="40" Click="Button_Click"/>
+                    <Button Grid.Row="0"
+                            Height="96"
+                            Width="384"
+                            Content="Запись к врачу"
+                            FontSize="40"
+                            Click="Button_Click" />
 
-                    <Button 
-                        Grid.Row="1"
-                        Height="96"
-                        Width="384"
-                        FontSize="32" Click="Button_Click_2">
+                    <Button Grid.Row="1"
+                            Height="96"
+                            Width="384"
+                            FontSize="32"
+                            Click="Button_Click_2">
                         <TextBlock TextAlignment="Center">
                             Запись на
-                            <LineBreak/>
+                            <LineBreak />
                             процедуры
                         </TextBlock>
                     </Button>
@@ -129,25 +123,25 @@
 
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <Button 
-                        Grid.Row="0"
-                        Height="96"
-                        Width="384"
-                        Content="Сдача анализов"
-                        FontSize="40" Click="Button_Click_1"/>
+                    <Button Grid.Row="0"
+                            Height="96"
+                            Width="384"
+                            Content="Сдача анализов"
+                            FontSize="40"
+                            Click="Button_Click_1" />
 
-                    <Button 
-                        Grid.Row="1"
-                        Height="96"
-                        Width="384"
-                        FontSize="32" Click="Button_Click_3">
+                    <Button Grid.Row="1"
+                            Height="96"
+                            Width="384"
+                            FontSize="32"
+                            Click="Button_Click_3">
                         <TextBlock TextAlignment="Center">
                             График работы 
-                            <LineBreak/>
+                            <LineBreak />
                             врачей
                         </TextBlock>
                     </Button>
@@ -156,21 +150,20 @@
 
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button   
-                    x:Name="PreviousPageButton"
-                    Click="PreviousPageButton_Click"
-                    Grid.Column="0"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Content="Назад"
-                    FontSize="32"
-                    Padding="50, 0"
-                    Height="72"/>
+                <Button x:Name="PreviousPageButton"
+                        Click="PreviousPageButton_Click"
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Content="Назад"
+                        FontSize="32"
+                        Padding="50, 0"
+                        Height="72" />
             </Grid>
         </Grid>
     </Grid>
