@@ -33,6 +33,7 @@
     <EntitySetMapping Name="Persons">
       <EntityTypeMapping TypeName="RegModel.Persons">
         <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="photo" ColumnName="photo" />
           <ScalarProperty Name="pipn" ColumnName="pipn" />
           <ScalarProperty Name="fullName" ColumnName="fullName" />
           <ScalarProperty Name="sex" ColumnName="sex" />

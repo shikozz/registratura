@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\4is2\timofeev\registratura\Registy\Registy\Base\RegModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\4IS2\timofeev\registratura\Registy\Registy\Base\RegModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

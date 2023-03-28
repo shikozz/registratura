@@ -119,6 +119,7 @@
     <Compile Include="Base\Users.cs">
       <DependentUpon>RegModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ImageConverter.cs" />
     <Compile Include="Pages\AdminPanelPage.xaml.cs">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
     </Compile>

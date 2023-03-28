@@ -39,7 +39,7 @@
       <PropertyRef Name="pipn" />
     </Key>
     <Property Name="pipn" Type="Int64" Nullable="false" />
-    <Property Name="fullName" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="fullName" Type="String" MaxLength="72" FixedLength="false" Unicode="true" />
     <Property Name="sex" Type="Boolean" />
     <Property Name="birthDate" Type="DateTime" Precision="0" />
     <Property Name="liveAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
@@ -47,6 +47,7 @@
     <NavigationProperty Name="PersonRooms" Relationship="Self.FK_PersonRooms_Persons" FromRole="Persons" ToRole="PersonRooms" />
     <NavigationProperty Name="PersonSpecializations" Relationship="Self.FK_PersonSpecializations_Persons" FromRole="Persons" ToRole="PersonSpecializations" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Users_Persons" FromRole="Persons" ToRole="Users" />
+    <Property Name="photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="PersonSpecializations">
     <Key>

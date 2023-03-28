@@ -31,11 +31,12 @@
       <PropertyRef Name="pipn" />
     </Key>
     <Property Name="pipn" Type="bigint" Nullable="false" />
-    <Property Name="fullName" Type="nvarchar" MaxLength="24" />
+    <Property Name="fullName" Type="nvarchar" MaxLength="72" />
     <Property Name="sex" Type="bit" />
     <Property Name="birthDate" Type="date" />
     <Property Name="liveAddress" Type="nvarchar" MaxLength="500" />
     <Property Name="phoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="PersonSpecializations">
     <Key>
