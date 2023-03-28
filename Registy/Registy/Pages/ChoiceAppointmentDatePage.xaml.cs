@@ -23,6 +23,7 @@ namespace Registy.Pages
     {
         private Orders _order;
         private DateTime _pickedDate;
+        private TimeSpan _pickedTime;
         private RegEntities _db = SourceCore.DataBase;
 
         public ChoiceAppointmentDatePage(int orderId)
@@ -44,7 +45,9 @@ namespace Registy.Pages
 
         private bool IsDateBusy()
         {
-            if (_pickedDate.Hour < 10) return true;
+            if (_pickedTime.Hours < 10 || _pickedTime.Hours > 18) return true;
+
+            _pickedTime.Add(_pickedTime);
             return _db.Schedule.FirstOrDefault(s => s.date == _pickedDate) != null;
         }
 
@@ -77,7 +80,8 @@ namespace Registy.Pages
             {
                 _db.Schedule.Add(schedule);
                 _db.SaveChanges();
-            } catch (Exception err)
+            }
+            catch (Exception err)
             {
                 MessageBox.Show($"Something went wrong!\n\n{err}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -87,12 +91,22 @@ namespace Registy.Pages
 
         private void OnChangedDate(object sender, SelectionChangedEventArgs e)
         {
-            int hours = AppointmentDate.SelectedDate.Value.Hour;
-            int minutes = AppointmentDate.SelectedDate.Value.Minute;
+            int hours = _pickedDate.Hour;
+            int minutes = _pickedDate.Minute;
 
             _pickedDate = (DateTime)AppointmentDate.SelectedDate;
             _pickedDate.AddHours(hours);
             _pickedDate.AddMinutes(minutes);
+        }
+
+        private void OnChangedTime(object sender, SelectionChangedEventArgs e)
+        {
+            TimeSpan timeSpan = new TimeSpan();
+
+            string time = TimePicker.SelectedValue.ToString();
+            string[] splitted = time.Split(':');
+
+            _pickedTime = new TimeSpan(int.Parse(splitted[1]), int.Parse(splitted[2]), 0);
         }
     }
 }

@@ -93,6 +93,7 @@
             </DatePicker>
 
             <ComboBox x:Name="TimePicker"
+                      SelectionChanged="OnChangedTime"
                       Margin="0, 24, 0, 0"
                       FontSize="24"
                       Width="250"
