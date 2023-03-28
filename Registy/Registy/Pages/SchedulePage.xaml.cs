@@ -18,9 +18,9 @@ namespace Registy.Pages
     /// <summary>
     /// Interaction logic for Schedule.xaml
     /// </summary>
-    public partial class Schedule : Page
+    public partial class SchedulePage : Page
     {
-        public Schedule()
+        public SchedulePage()
         {
             InitializeComponent();
         }

@@ -309,3 +309,5 @@ D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChangePasswordPAge
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChoiceAppointmentDatePage.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChangePasswordPAge.baml
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChoiceAppointmentDatePage.baml
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ApplyAppointmentPage.g.cs
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ApplyAppointmentPage.baml
