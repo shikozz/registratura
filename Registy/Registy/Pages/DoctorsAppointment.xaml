@@ -118,21 +118,21 @@
                             Margin="0, 24, 0, 0">
                     <Button Content="Предыдущий"
                             Margin="16, 0"
-                            Width="192"
+                            Width="240"
                             Height="48"
                             FontSize="18"
                             Click="OnPreviousDoctorButtonClick" />
 
                     <Button Content="Подтвердить"
                             Margin="16, 0"
-                            Width="256"
+                            Width="320"
                             Height="62"
                             FontSize="22"
                             Click="OnApplyDoctorButtonClick" />
 
                     <Button Content="Следующий"
                             Margin="16, 0"
-                            Width="192"
+                            Width="240"
                             Height="48"
                             FontSize="18"
                             Click="OnNextDoctorButtonClick" />
@@ -140,7 +140,7 @@
 
                 <Button Content="Назад"
                         Click="OnBackButtonClick"
-                        Width="192"
+                        Width="240"
                         Height="40"
                         FontSize="17"
                         Margin="0, 16, 0, 0" />

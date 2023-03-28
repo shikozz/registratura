@@ -277,7 +277,6 @@ D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\DoctorsAppointment
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\PassAnalyzies.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\RegistrationPage.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\RegProc.g.cs
-D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\Schedule.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ServicesPage.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\App.g.cs
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Registy_MarkupCompile.cache
@@ -291,7 +290,6 @@ D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\DoctorsAppointment
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\PassAnalyzies.baml
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\RegistrationPage.baml
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\RegProc.baml
-D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\Schedule.baml
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ServicesPage.baml
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Registy.g.resources
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Registy.Properties.Resources.resources
@@ -311,3 +309,7 @@ D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChangePasswordPAge
 D:\4is2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ChoiceAppointmentDatePage.baml
 D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ApplyAppointmentPage.g.cs
 D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\ApplyAppointmentPage.baml
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\SchedulePage.g.cs
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\SchedulePage.baml
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\AppliedAppointmentPage.g.cs
+D:\4IS2\timofeev\registratura\Registy\Registy\obj\Debug\Pages\AppliedAppointmentPage.baml

@@ -21,9 +21,9 @@ namespace Registy.Base
         }
     
         public int id { get; set; }
-        public string snils { get; set; }
         public Nullable<System.DateTime> date { get; set; }
         public Nullable<int> orderId { get; set; }
+        public Nullable<long> pipn { get; set; }
     
         public virtual Orders Orders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

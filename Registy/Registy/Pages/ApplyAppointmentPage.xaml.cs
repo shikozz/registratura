@@ -18,18 +18,21 @@ namespace Registy.Pages
 {
     public partial class ApplyAppointmentPage : Page
     {
+        private Schedule _schedule;
         RegEntities _db = SourceCore.DataBase;
 
         public ApplyAppointmentPage(int scheduleId)
         {
             InitializeComponent();
-            //AppointmentDateTextBlock.Text
-            Schedule schedule = _db.Schedule.FirstOrDefault(s => s.id == scheduleId);
+            _schedule = _db.Schedule.FirstOrDefault(s => s.id == scheduleId);
 
-
-            PersonSpecializations personSpecializations = schedule.Orders.PersonSpecializations;
+            // Date and time of appointment
+            DateTime date = _schedule.date.Value;
+            AppointmentDateTextBlock.Text = date.Date.ToString();
+            AppointmentTimeTextBlock.Text = $"{date.Hour}:{date.Minute}";
 
             // Room number;
+            PersonSpecializations personSpecializations = _schedule.Orders.PersonSpecializations;
             long pipn = personSpecializations.Persons.pipn;
             CabinetTextBlock.Text = _db.PersonRooms.FirstOrDefault(pr => pr.personId == pipn).Rooms.number.ToString();
 
@@ -39,6 +42,26 @@ namespace Registy.Pages
 
             // Doctor name
             DoctorNameTextBlock.Text = personSpecializations.Persons.fullName;
+        }
+
+        private void OnApplyAppointmentButtonClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                _db.Schedule.Add(_schedule);
+                _db.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show($"Something went wrong!\n\n{err}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            NavigationService.Navigate(new AppliedAppointmentPage());
+        }
+
+        private void OnRefuseAppointmentButtonClick(object sender, RoutedEventArgs e)
+        {
+            // DELETE ORDER
         }
     }
 }

@@ -31,7 +31,22 @@ namespace Registy.Pages
 
         private void OnApplyDoctorButtonClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ChoiceAppointmentDatePage());
+            Orders order = new Orders
+            {
+                docId = _currentPersonSpecialization
+            };
+
+            try
+            {
+                _db.Orders.Add(order);
+                _db.SaveChanges();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show($"Something went wrong!\n\n{err}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            NavigationService.Navigate(new ChoiceAppointmentDatePage(order.id));
         }
 
         private void OnNextDoctorButtonClick(object sender, RoutedEventArgs e)

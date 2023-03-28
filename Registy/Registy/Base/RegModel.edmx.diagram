@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ab4189fabb546be89d11f695ff32325" Name="Diagram1">
+      <Diagram DiagramId="6ab4189fabb546be89d11f695ff32325" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="RegModel.AnalyzeNames" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="RegModel.Orders" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="RegModel.PersonRooms" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
