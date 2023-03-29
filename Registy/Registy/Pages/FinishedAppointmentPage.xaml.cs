@@ -15,14 +15,18 @@ using System.Windows.Shapes;
 
 namespace Registy.Pages
 {
-    /// <summary>
-    /// Interaction logic for AppliedAppointmentPage.xaml
-    /// </summary>
-    public partial class AppliedAppointmentPage : Page
+    public partial class FinishedAppointmentPage : Page
     {
-        public AppliedAppointmentPage()
+        public FinishedAppointmentPage(bool isSuccess = true)
         {
             InitializeComponent();
+
+            if (!isSuccess)
+            {
+                HeaderTextBlock.Text = "Запись отклонена";
+                InformationTextBlock.Text = "Нам жаль, что Вы передумали записываться на приём. Обращайтесь, если это потребуется!";
+                ExitButton.Content = "Досвидания";
+            }
         }
 
         private void OnCloseButtonClick(object sender, RoutedEventArgs e)

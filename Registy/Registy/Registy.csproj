@@ -83,9 +83,6 @@
     <Compile Include="Base\ProcedureNames.cs">
       <DependentUpon>RegModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Base\ProdecuresToShedule.cs">
-      <DependentUpon>RegModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Base\RegModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,8 +120,8 @@
     <Compile Include="Pages\AdminPanelPage.xaml.cs">
       <DependentUpon>AdminPanelPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AppliedAppointmentPage.xaml.cs">
-      <DependentUpon>AppliedAppointmentPage.xaml</DependentUpon>
+    <Compile Include="Pages\FinishedAppointmentPage.xaml.cs">
+      <DependentUpon>FinishedAppointmentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ApplyAppointmentPage.xaml.cs">
       <DependentUpon>ApplyAppointmentPage.xaml</DependentUpon>
@@ -150,6 +147,9 @@
     <Compile Include="Pages\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PIPNModalWindow.xaml.cs">
+      <DependentUpon>PIPNModalWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SourceCore.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -167,7 +167,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\AppliedAppointmentPage.xaml">
+    <Page Include="Pages\FinishedAppointmentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -212,6 +212,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ServicesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PIPNModalWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -282,7 +286,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Base\RegModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

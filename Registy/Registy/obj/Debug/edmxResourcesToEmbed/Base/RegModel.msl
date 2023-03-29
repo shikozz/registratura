@@ -33,13 +33,13 @@
     <EntitySetMapping Name="Persons">
       <EntityTypeMapping TypeName="RegModel.Persons">
         <MappingFragment StoreEntitySet="Persons">
-          <ScalarProperty Name="photo" ColumnName="photo" />
           <ScalarProperty Name="pipn" ColumnName="pipn" />
           <ScalarProperty Name="fullName" ColumnName="fullName" />
           <ScalarProperty Name="sex" ColumnName="sex" />
           <ScalarProperty Name="birthDate" ColumnName="birthDate" />
           <ScalarProperty Name="liveAddress" ColumnName="liveAddress" />
           <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -63,15 +63,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ProdecuresToShedule">
-      <EntityTypeMapping TypeName="RegModel.ProdecuresToShedule">
-        <MappingFragment StoreEntitySet="ProdecuresToShedule">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="procId" ColumnName="procId" />
-          <ScalarProperty Name="sheduleId" ColumnName="sheduleId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="RegModel.Roles">
         <MappingFragment StoreEntitySet="Roles">
@@ -91,8 +82,8 @@
     <EntitySetMapping Name="Schedule">
       <EntityTypeMapping TypeName="RegModel.Schedule">
         <MappingFragment StoreEntitySet="Schedule">
-          <ScalarProperty Name="pipn" ColumnName="pipn" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="pipn" ColumnName="pipn" />
           <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="orderId" ColumnName="orderId" />
         </MappingFragment>

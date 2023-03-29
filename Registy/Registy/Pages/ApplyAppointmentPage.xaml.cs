@@ -28,11 +28,11 @@ namespace Registy.Pages
 
             // Date and time of appointment
             DateTime date = _schedule.date.Value;
-            AppointmentDateTextBlock.Text = date.Date.ToString();
+            AppointmentDateTextBlock.Text = date.ToString("dd.MM.yyyy");
             AppointmentTimeTextBlock.Text = $"{date.Hour}:{date.Minute}";
 
             // Room number;
-            PersonSpecializations personSpecializations = _schedule.Orders.PersonSpecializations;
+            PersonSpecializations personSpecializations = _schedule.PersonSpecializations;
             long pipn = personSpecializations.Persons.pipn;
             CabinetTextBlock.Text = _db.PersonRooms.FirstOrDefault(pr => pr.personId == pipn).Rooms.number.ToString();
 
@@ -46,22 +46,20 @@ namespace Registy.Pages
 
         private void OnApplyAppointmentButtonClick(object sender, RoutedEventArgs e)
         {
-            try
+            if (_schedule.pipn == null)
             {
-                _db.Schedule.Add(_schedule);
-                _db.SaveChanges();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show($"Something went wrong!\n\n{err}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                
                 return;
             }
-            NavigationService.Navigate(new AppliedAppointmentPage());
+            NavigationService.Navigate(new FinishedAppointmentPage());
         }
 
         private void OnRefuseAppointmentButtonClick(object sender, RoutedEventArgs e)
         {
-            // DELETE ORDER
+            _db.Schedule.Remove(_schedule);
+            _db.Entry(_schedule).State = System.Data.Entity.EntityState.Deleted;
+
+            NavigationService.Navigate(new FinishedAppointmentPage(false));
         }
     }
 }

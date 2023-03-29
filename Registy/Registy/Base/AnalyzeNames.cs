@@ -14,19 +14,11 @@ namespace Registy.Base
     
     public partial class AnalyzeNames
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AnalyzeNames()
-        {
-            this.Orders = new HashSet<Orders>();
-        }
-    
         public int id { get; set; }
         public string name { get; set; }
         public Nullable<int> roomId { get; set; }
         public Nullable<System.TimeSpan> startTime { get; set; }
     
         public virtual Rooms Rooms { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

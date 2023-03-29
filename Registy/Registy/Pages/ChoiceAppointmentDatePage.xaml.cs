@@ -16,24 +16,23 @@ using Registy.Base;
 
 namespace Registy.Pages
 {
-    /// <summary>
-    /// Interaction logic for ChoiceAppointmentDatePage.xaml
-    /// </summary>
     public partial class ChoiceAppointmentDatePage : Page
     {
-        private Orders _order;
+        private int _personSpecializationId;
         private DateTime _pickedDate;
         private TimeSpan _pickedTime;
         private RegEntities _db = SourceCore.DataBase;
 
-        public ChoiceAppointmentDatePage(int orderId)
+        public ChoiceAppointmentDatePage(int personSpecializationId)
         {
             InitializeComponent();
             AppointmentDate.SelectedDate = DateTime.Now.AddDays(1);
             AppointmentDate.DisplayDateStart = DateTime.Now.AddDays(1);
             AppointmentDate.DisplayDateEnd = DateTime.Now.AddDays(14);
 
-            _order = _db.Orders.FirstOrDefault(o => o.id == orderId);
+            TimePicker.SelectedIndex = 1;
+
+            _personSpecializationId = personSpecializationId;
 
             ErrorTextBlock.Visibility = Visibility.Hidden;
         }
@@ -47,8 +46,8 @@ namespace Registy.Pages
         {
             if (_pickedTime.Hours < 10 || _pickedTime.Hours > 18) return true;
 
-            _pickedTime.Add(_pickedTime);
-            return _db.Schedule.FirstOrDefault(s => s.date == _pickedDate) != null;
+            _pickedDate = _pickedDate.Add(_pickedTime);
+            return _db.Schedule.FirstOrDefault(s => s.date == _pickedDate && s.orderId == _personSpecializationId) != null;
         }
 
         private void OnApplyDateButtonClick(object sender, RoutedEventArgs e)
@@ -66,27 +65,15 @@ namespace Registy.Pages
                 ErrorTextBlock.Visibility = Visibility.Visible;
                 return;
             }
-
             ErrorTextBlock.Visibility = Visibility.Hidden;
 
-            Schedule schedule = new Schedule
-            {
-                pipn = _order.PersonSpecializations.personId,
-                date = _pickedDate,
-                orderId = _order.id,
-            };
+            bool? result = new PIPNModalWindow(_personSpecializationId, _pickedDate).ShowDialog();
 
-            try
+            if (result != null && result != false)
             {
-                _db.Schedule.Add(schedule);
-                _db.SaveChanges();
+                Schedule schedule = _db.Schedule.FirstOrDefault(s => s.date == _pickedDate && s.PersonSpecializations.id == _personSpecializationId);
+                NavigationService.Navigate(new ApplyAppointmentPage(schedule.id));
             }
-            catch (Exception err)
-            {
-                MessageBox.Show($"Something went wrong!\n\n{err}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            NavigationService.Navigate(new ApplyAppointmentPage(schedule.id));
         }
 
         private void OnChangedDate(object sender, SelectionChangedEventArgs e)
@@ -101,12 +88,13 @@ namespace Registy.Pages
 
         private void OnChangedTime(object sender, SelectionChangedEventArgs e)
         {
-            TimeSpan timeSpan = new TimeSpan();
-
             string time = TimePicker.SelectedValue.ToString();
             string[] splitted = time.Split(':');
 
-            _pickedTime = new TimeSpan(int.Parse(splitted[1]), int.Parse(splitted[2]), 0);
+            int.TryParse(splitted[1], out int hours);
+            int.TryParse(splitted[2], out int minutes);
+
+            _pickedTime = new TimeSpan(hours, minutes, 0);
         }
     }
 }
