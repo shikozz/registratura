@@ -14,21 +14,9 @@ namespace Registy.Base
     
     public partial class Orders
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Orders()
-        {
-            this.Schedule = new HashSet<Schedule>();
-        }
-    
         public int id { get; set; }
         public Nullable<int> analyzeId { get; set; }
         public Nullable<int> procId { get; set; }
-        public Nullable<int> docId { get; set; }
-    
-        public virtual AnalyzeNames AnalyzeNames { get; set; }
-        public virtual PersonSpecializations PersonSpecializations { get; set; }
-        public virtual ProcedureNames ProcedureNames { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule> Schedule { get; set; }
+        public Nullable<long> docId { get; set; }
     }
 }

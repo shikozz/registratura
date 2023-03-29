@@ -44,7 +44,7 @@ namespace Registy.Pages
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Schedule());
+            NavigationService.Navigate(new SchedulePage());
         }
 
         private void StartElipse_MouseDown(object sender, MouseButtonEventArgs e)

@@ -14,19 +14,11 @@ namespace Registy.Base
     
     public partial class Schedule
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Schedule()
-        {
-            this.ProdecuresToShedule = new HashSet<ProdecuresToShedule>();
-        }
-    
         public int id { get; set; }
-        public string snils { get; set; }
+        public long pipn { get; set; }
         public Nullable<System.DateTime> date { get; set; }
-        public Nullable<int> orderId { get; set; }
+        public int orderId { get; set; }
     
-        public virtual Orders Orders { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProdecuresToShedule> ProdecuresToShedule { get; set; }
+        public virtual PersonSpecializations PersonSpecializations { get; set; }
     }
 }

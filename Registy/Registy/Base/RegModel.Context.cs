@@ -31,7 +31,6 @@ namespace Registy.Base
         public virtual DbSet<Persons> Persons { get; set; }
         public virtual DbSet<PersonSpecializations> PersonSpecializations { get; set; }
         public virtual DbSet<ProcedureNames> ProcedureNames { get; set; }
-        public virtual DbSet<ProdecuresToShedule> ProdecuresToShedule { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Rooms> Rooms { get; set; }
         public virtual DbSet<Schedule> Schedule { get; set; }

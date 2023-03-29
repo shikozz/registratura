@@ -1,11 +1,12 @@
 ﻿<Page x:Class="Registy.Pages.ChoiceAppointmentDatePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Registy.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1200"
+      mc:Ignorable="d"
+      d:DesignHeight="800"
+      d:DesignWidth="1200"
       Title="ChoiceAppointmentDatePage">
 
     <Grid Background="{StaticResource BackgroundColor}">
@@ -74,9 +75,73 @@
                          Margin="900, 16 0, 16" />
             </Grid>
 
-            <TextBlock Text="Выбор даты приема"
+            <TextBlock Text="Выбор времени и даты приема"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Width="450"
                        FontSize="42"
                        HorizontalAlignment="Center" />
+
+            <DatePicker x:Name="AppointmentDate"
+                        SelectedDateChanged="OnChangedDate"
+                        FontSize="24"
+                        Margin="0, 24, 0, 0"
+                        AllowDrop="True"
+                        SelectedDateFormat="Short"
+                        Width="450">
+
+            </DatePicker>
+
+            <ComboBox x:Name="TimePicker"
+                      SelectionChanged="OnChangedTime"
+                      Margin="0, 24, 0, 0"
+                      FontSize="24"
+                      Width="250"
+                      HorizontalAlignment="Center">
+
+                <ComboBoxItem>10:00</ComboBoxItem>
+                <ComboBoxItem>10:30</ComboBoxItem>
+                <ComboBoxItem>11:00</ComboBoxItem>
+                <ComboBoxItem>11:30</ComboBoxItem>
+                <ComboBoxItem>12:00</ComboBoxItem>
+                <ComboBoxItem>12:30</ComboBoxItem>
+                <ComboBoxItem>13:00</ComboBoxItem>
+                <ComboBoxItem>13:30</ComboBoxItem>
+                <ComboBoxItem>14:00</ComboBoxItem>
+                <ComboBoxItem>14:30</ComboBoxItem>
+                <ComboBoxItem>15:00</ComboBoxItem>
+                <ComboBoxItem>15:30</ComboBoxItem>
+                <ComboBoxItem>16:00</ComboBoxItem>
+                <ComboBoxItem>16:30</ComboBoxItem>
+                <ComboBoxItem>17:00</ComboBoxItem>
+                <ComboBoxItem>17:30</ComboBoxItem>
+                <ComboBoxItem>18:00</ComboBoxItem>
+            </ComboBox>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0, 120, 0, 0">
+                <TextBlock x:Name="ErrorTextBlock"
+                           Visibility="Hidden"
+                           FontSize="42"
+                           Margin="0, 0, 0, 100"
+                           Text="Данная дата уже занята, выберите другую!"
+                           HorizontalAlignment="Center"
+                           TextAlignment="Center"
+                           Width="600"
+                           TextWrapping="Wrap" />
+                
+                <Button Content="Подтвердить"
+                        Click="OnApplyDateButtonClick"
+                        Width="360"
+                        Height="60"
+                        FontSize="24" />
+
+                <Button Content="Назад"
+                        Click="OnBackButtonClick"
+                        Width="300"
+                        Height="48"
+                        FontSize="20"
+                        Margin="0, 16, 0, 0" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

@@ -4,33 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6ab4189fabb546be89d11f695ff32325" Name="Diagram1">
-        <EntityTypeShape EntityType="RegModel.AnalyzeNames" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Orders" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.PersonRooms" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Persons" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.PersonSpecializations" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.ProcedureNames" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.ProdecuresToShedule" Width="1.5" PointX="9.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Roles" Width="1.5" PointX="3.75" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Rooms" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Schedule" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Specializations" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="RegModel.Users" Width="1.5" PointX="6" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="8d2ecd4a6aa641d9be8c9eeec38f317c" Name="Diagram1">
+        <EntityTypeShape EntityType="RegModel.AnalyzeNames" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Orders" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.PersonRooms" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Persons" Width="1.5" PointX="3.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.PersonSpecializations" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.ProcedureNames" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Roles" Width="1.5" PointX="6.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Rooms" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Schedule" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Specializations" Width="1.5" PointX="3.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegModel.Users" Width="1.5" PointX="9" PointY="11.75" IsExpanded="true" />
         <AssociationConnector Association="RegModel.FK_AnalyzeNames_Rooms" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_Orders_AnalyzeNames" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_Orders_PersonSpecializations" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_Orders_ProcedureNames" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_Schedule_Orders" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_PersonRooms_Persons" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_PersonRooms_Rooms" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_PersonSpecializations_Persons" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_Users_Persons" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_PersonSpecializations_Specializations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegModel.FK_Schedule_PersonSpecializations" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_ProcedureNames_Rooms" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_ProdecuresToShedule_ProcedureNames" ManuallyRouted="false" />
-        <AssociationConnector Association="RegModel.FK_ProdecuresToShedule_Schedule" ManuallyRouted="false" />
         <AssociationConnector Association="RegModel.FK_Users_Roles1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

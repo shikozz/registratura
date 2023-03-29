@@ -80,43 +80,70 @@
                        HorizontalAlignment="Center" />
 
             <StackPanel Margin="0 24, 0, 0">
-                <!--TODO: PHOTO-->
-                <Rectangle
-                    x:Name="SlidetItem"
-                    Fill="Green"
-                    Width="360"
-                    Height="360" />
+                <Grid>
+                    <Rectangle x:Name="DoctorImageRectangle"
+                               Width="360"
+                               Height="202">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="DoctorImage" />
+                        </Rectangle.Fill>
+                    </Rectangle>
 
-                <StackPanel HorizontalAlignment="Center" Margin="0, 24, 0, 0">
-                    <TextBlock Text="Васильева Надежда Анатольевна" x:Name="DoctorNameTextBlock"/>
-                    <TextBlock Text="Фармацевт" HorizontalAlignment="Center" FontSize="28" x:Name="DoctorSpecializationTextBlock"/>
-                    <TextBlock Text="Более 3 лет" HorizontalAlignment="Center" FontSize="28" x:Name="DoctorWorkTimeTextBlock"/>
+                    <TextBlock Text="В данный момент нет фотографии врача."
+                               Width="360"
+                               FontSize="36"
+                               Visibility="Collapsed"
+                               TextWrapping="Wrap"
+                               TextAlignment="Center"
+                               VerticalAlignment="Center"
+                               x:Name="NoPhotoBlock"/>
+                </Grid>
+
+                <StackPanel HorizontalAlignment="Center"
+                            Margin="0, 24, 0, 0">
+                    <TextBlock Text="Васильева Надежда Анатольевна"
+                               x:Name="DoctorNameTextBlock" />
+                    <TextBlock Text="Фармацевт"
+                               HorizontalAlignment="Center"
+                               FontSize="28"
+                               x:Name="DoctorSpecializationTextBlock" />
+                    <TextBlock Text="Более 3 лет"
+                               HorizontalAlignment="Center"
+                               FontSize="28"
+                               x:Name="DoctorWorkTimeTextBlock" />
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 24, 0, 0">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0, 24, 0, 0">
                     <Button Content="Предыдущий"
                             Margin="16, 0"
-                            Width="192"
+                            Width="240"
                             Height="48"
                             FontSize="18"
-                            Click="OnPreviousDoctorButtonClick"/>
+                            Click="OnPreviousDoctorButtonClick" />
 
                     <Button Content="Подтвердить"
                             Margin="16, 0"
-                            Width="256"
+                            Width="320"
                             Height="62"
                             FontSize="22"
-                            Click="OnApplyDoctorButtonClick"/>
+                            Click="OnApplyDoctorButtonClick" />
 
                     <Button Content="Следующий"
                             Margin="16, 0"
-                            Width="192"
+                            Width="240"
                             Height="48"
                             FontSize="18"
-                            Click="OnNextDoctorButtonClick"/>
+                            Click="OnNextDoctorButtonClick" />
                 </StackPanel>
 
-                <Button Content="Назад" Click="OnBackButtonClick" Width="192" Height="40" FontSize="17" Margin="0, 16, 0, 0"/>
+                <Button Content="Назад"
+                        Click="OnBackButtonClick"
+                        Width="240"
+                        Height="40"
+                        FontSize="17"
+                        Margin="0, 16, 0, 0" />
             </StackPanel>
         </StackPanel>
     </Grid>

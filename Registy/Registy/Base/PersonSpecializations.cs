@@ -17,7 +17,7 @@ namespace Registy.Base
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PersonSpecializations()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Schedule = new HashSet<Schedule>();
         }
     
         public int id { get; set; }
@@ -25,9 +25,9 @@ namespace Registy.Base
         public Nullable<long> personId { get; set; }
         public int workTime { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Orders> Orders { get; set; }
         public virtual Persons Persons { get; set; }
         public virtual Specializations Specializations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Schedule> Schedule { get; set; }
     }
 }

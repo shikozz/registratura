@@ -24,44 +24,55 @@ namespace Registy.Pages
         public DoctorsAppointment()
         {
             InitializeComponent();
-            PersonSpecializations ps = _db.PersonSpecializations.FirstOrDefault();
-            _currentPersonSpecialization = ps.id;
-            Persons doctor = _db.Persons.FirstOrDefault(d => d.pipn == ps.personId);
-            SetDoctorData(doctor, ps);
+            PersonSpecializations personSpecialization = _db.PersonSpecializations.FirstOrDefault();
+            _currentPersonSpecialization = personSpecialization.id;
+            SetDoctorData(personSpecialization);
         }
 
         private void OnApplyDoctorButtonClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ChoiceAppointmentDatePage());
+            NavigationService.Navigate(new ChoiceAppointmentDatePage(_currentPersonSpecialization));
         }
 
         private void OnNextDoctorButtonClick(object sender, RoutedEventArgs e)
         {
-            PersonSpecializations ps = _db.PersonSpecializations.FirstOrDefault(innerPS => innerPS.id > _currentPersonSpecialization);
-            if (ps == null) ps = _db.PersonSpecializations.FirstOrDefault();
+            PersonSpecializations personSpecialization = _db.PersonSpecializations.FirstOrDefault(ps => ps.id > _currentPersonSpecialization);
+            if (personSpecialization == null) personSpecialization = _db.PersonSpecializations.FirstOrDefault();
 
-            _currentPersonSpecialization = ps.id;
-            Persons doctor = _db.Persons.FirstOrDefault(d => d.pipn == ps.personId);
-            SetDoctorData(doctor, ps);
+            _currentPersonSpecialization = personSpecialization.id;
+            SetDoctorData(personSpecialization);
         }
 
         private void OnPreviousDoctorButtonClick(object sender, RoutedEventArgs e)
         {
-            PersonSpecializations ps = _db.PersonSpecializations.FirstOrDefault(innerPS => innerPS.id < _currentPersonSpecialization);
-            if (ps == null) ps = _db.PersonSpecializations.OrderByDescending(psob => psob.id).FirstOrDefault();
-            _currentPersonSpecialization = ps.id;
-            Persons doctor = _db.Persons.FirstOrDefault(d => d.pipn == ps.personId);
-            SetDoctorData(doctor, ps);
+            PersonSpecializations personSpecialization = _db.PersonSpecializations.OrderByDescending(ps => ps.id).FirstOrDefault(ps => ps.id < _currentPersonSpecialization);
+            if (personSpecialization == null) personSpecialization = _db.PersonSpecializations.OrderByDescending(ps => ps.id).FirstOrDefault();
+
+            _currentPersonSpecialization = personSpecialization.id;
+            SetDoctorData(personSpecialization);
         }
 
-        private void SetDoctorData(Persons doctor, PersonSpecializations spec)
+        private void SetDoctorData(PersonSpecializations personSpecialization)
         {
-            int workTime = spec.workTime;
-            string specialization = spec.Specializations.name;
+            Persons doctor = personSpecialization.Persons;
+            int workTime = personSpecialization.workTime;
+            string specializationName = personSpecialization.Specializations.name;
 
             DoctorNameTextBlock.Text = doctor.fullName;
-            DoctorSpecializationTextBlock.Text = specialization[0] + specialization.ToLower().Substring(1);
-            DoctorWorkTimeTextBlock.Text = "Опыт работы " + (workTime == 0 ? "менее 1 года" : (workTime == 1 ? "1 год" : $"{workTime} лет"));
+            DoctorSpecializationTextBlock.Text = specializationName[0] + specializationName.ToLower().Substring(1);
+            DoctorWorkTimeTextBlock.Text = "Опыт работы " + (workTime == 0 ? "менее 1 года" : (workTime < 5 ? $"{workTime} года" : $"{workTime} лет"));
+
+            if (doctor.photo != null)
+            {
+                DoctorImageRectangle.Visibility = Visibility.Visible;
+                DoctorImage.ImageSource = ImageConverter.Instance.ConvertToImage(doctor.photo);
+                NoPhotoBlock.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                DoctorImageRectangle.Visibility = Visibility.Collapsed;
+                NoPhotoBlock.Visibility = Visibility.Visible;
+            }
         }
 
         private void OnBackButtonClick(object sender, RoutedEventArgs e)

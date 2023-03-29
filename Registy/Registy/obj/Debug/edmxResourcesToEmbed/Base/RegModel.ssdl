@@ -16,7 +16,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="analyzeId" Type="int" />
     <Property Name="procId" Type="int" />
-    <Property Name="docId" Type="int" />
+    <Property Name="docId" Type="bigint" />
   </EntityType>
   <EntityType Name="PersonRooms">
     <Key>
@@ -31,11 +31,12 @@
       <PropertyRef Name="pipn" />
     </Key>
     <Property Name="pipn" Type="bigint" Nullable="false" />
-    <Property Name="fullName" Type="nvarchar" MaxLength="24" />
+    <Property Name="fullName" Type="nvarchar" MaxLength="72" />
     <Property Name="sex" Type="bit" />
     <Property Name="birthDate" Type="date" />
     <Property Name="liveAddress" Type="nvarchar" MaxLength="500" />
     <Property Name="phoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="photo" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="PersonSpecializations">
     <Key>
@@ -54,14 +55,6 @@
     <Property Name="name" Type="nvarchar" MaxLength="500" />
     <Property Name="roomId" Type="int" />
     <Property Name="startTime" Type="time" Precision="7" />
-  </EntityType>
-  <EntityType Name="ProdecuresToShedule">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="procId" Type="int" />
-    <Property Name="sheduleId" Type="int" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
@@ -82,9 +75,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="snils" Type="nvarchar" MaxLength="50" />
-    <Property Name="date" Type="date" />
-    <Property Name="orderId" Type="int" />
+    <Property Name="pipn" Type="bigint" Nullable="false" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="orderId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Specializations">
     <Key>
@@ -122,42 +115,6 @@
       </Principal>
       <Dependent Role="AnalyzeNames">
         <PropertyRef Name="roomId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Orders_AnalyzeNames">
-    <End Role="AnalyzeNames" Type="Self.AnalyzeNames" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="AnalyzeNames">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Orders">
-        <PropertyRef Name="analyzeId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Orders_PersonSpecializations">
-    <End Role="PersonSpecializations" Type="Self.PersonSpecializations" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PersonSpecializations">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Orders">
-        <PropertyRef Name="docId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Orders_ProcedureNames">
-    <End Role="ProcedureNames" Type="Self.ProcedureNames" Multiplicity="0..1" />
-    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ProcedureNames">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Orders">
-        <PropertyRef Name="procId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -221,35 +178,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ProdecuresToShedule_ProcedureNames">
-    <End Role="ProcedureNames" Type="Self.ProcedureNames" Multiplicity="0..1" />
-    <End Role="ProdecuresToShedule" Type="Self.ProdecuresToShedule" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ProcedureNames">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ProdecuresToShedule">
-        <PropertyRef Name="procId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ProdecuresToShedule_Schedule">
-    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-    <End Role="ProdecuresToShedule" Type="Self.ProdecuresToShedule" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Schedule">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="ProdecuresToShedule">
-        <PropertyRef Name="sheduleId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Schedule_Orders">
-    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+  <Association Name="FK_Schedule_PersonSpecializations">
+    <End Role="PersonSpecializations" Type="Self.PersonSpecializations" Multiplicity="1" />
     <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Orders">
+      <Principal Role="PersonSpecializations">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Schedule">
@@ -288,7 +221,6 @@
     <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PersonSpecializations" EntityType="Self.PersonSpecializations" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProcedureNames" EntityType="Self.ProcedureNames" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ProdecuresToShedule" EntityType="Self.ProdecuresToShedule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
@@ -298,18 +230,6 @@
     <AssociationSet Name="FK_AnalyzeNames_Rooms" Association="Self.FK_AnalyzeNames_Rooms">
       <End Role="Rooms" EntitySet="Rooms" />
       <End Role="AnalyzeNames" EntitySet="AnalyzeNames" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_AnalyzeNames" Association="Self.FK_Orders_AnalyzeNames">
-      <End Role="AnalyzeNames" EntitySet="AnalyzeNames" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_PersonSpecializations" Association="Self.FK_Orders_PersonSpecializations">
-      <End Role="PersonSpecializations" EntitySet="PersonSpecializations" />
-      <End Role="Orders" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Orders_ProcedureNames" Association="Self.FK_Orders_ProcedureNames">
-      <End Role="ProcedureNames" EntitySet="ProcedureNames" />
-      <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
     <AssociationSet Name="FK_PersonRooms_Persons" Association="Self.FK_PersonRooms_Persons">
       <End Role="Persons" EntitySet="Persons" />
@@ -331,16 +251,8 @@
       <End Role="Rooms" EntitySet="Rooms" />
       <End Role="ProcedureNames" EntitySet="ProcedureNames" />
     </AssociationSet>
-    <AssociationSet Name="FK_ProdecuresToShedule_ProcedureNames" Association="Self.FK_ProdecuresToShedule_ProcedureNames">
-      <End Role="ProcedureNames" EntitySet="ProcedureNames" />
-      <End Role="ProdecuresToShedule" EntitySet="ProdecuresToShedule" />
-    </AssociationSet>
-    <AssociationSet Name="FK_ProdecuresToShedule_Schedule" Association="Self.FK_ProdecuresToShedule_Schedule">
-      <End Role="Schedule" EntitySet="Schedule" />
-      <End Role="ProdecuresToShedule" EntitySet="ProdecuresToShedule" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Schedule_Orders" Association="Self.FK_Schedule_Orders">
-      <End Role="Orders" EntitySet="Orders" />
+    <AssociationSet Name="FK_Schedule_PersonSpecializations" Association="Self.FK_Schedule_PersonSpecializations">
+      <End Role="PersonSpecializations" EntitySet="PersonSpecializations" />
       <End Role="Schedule" EntitySet="Schedule" />
     </AssociationSet>
     <AssociationSet Name="FK_Users_Persons" Association="Self.FK_Users_Persons">
