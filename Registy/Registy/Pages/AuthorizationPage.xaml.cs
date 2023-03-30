@@ -54,5 +54,10 @@ namespace Registy.Pages
         {
             NavigationService.Navigate(new BeginPage());
         }
+
+        private void BackToBeginPage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new BeginPage());
+        }
     }
 }

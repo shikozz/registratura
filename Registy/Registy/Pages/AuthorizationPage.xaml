@@ -11,10 +11,10 @@
 
     <Grid Background="{StaticResource BackgroundColor}" Focusable="True" x:Name="MainGrid">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16, 16, 0, 0">
-            <Button Background="Transparent" BorderBrush="{x:Null}" Height="48" Width="48"  Style="{x:Null}">
+            <Button Name="BackToBeginPage" Click="BackToBeginPage_Click" Background="Transparent" BorderBrush="{x:Null}" Height="48" Width="48"  Style="{x:Null}">
                 <Image Source="/Images/back.png"/>
             </Button>
-            <Label  Content="Назад" FontSize="24" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
+            <Label Content="Назад" FontSize="24" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
         </StackPanel>
 
 
