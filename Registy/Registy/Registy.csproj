@@ -297,6 +297,7 @@
       <DependentUpon>RegModel.edmx</DependentUpon>
       <LastGenOutput>RegModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\hospital-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
